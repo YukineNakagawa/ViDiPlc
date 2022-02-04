@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "73e2ffad-cb29-4ce3-add8-14e7258b68aa": {
+      "ProjectGuid": "73e2ffad-cb29-4ce3-add8-14e7258b68aa",
+      "DisplayName": "MX65ViDiDetecter",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "その他のファイル",
+      "ColorIndex": -1
+    },
+    "fc9c71b2-6465-495b-bc0f-fe0e9d693751": {
+      "ProjectGuid": "fc9c71b2-6465-495b-bc0f-fe0e9d693751",
+      "DisplayName": "PlcComm",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

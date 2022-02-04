@@ -1,0 +1,560 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="clr-namespace:ViDi2.UI;assembly=ViDi.NET.UI" x:Name="ViDiDetect_MainWindow"
+        x:Class="Example.Runtime.MainWindow"
+        Title="AI検査装置 Ver.1.0.0" Width="1570" Height="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized" SizeToContent="WidthAndHeight" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Closing="MainWindow_Closing">
+
+    <DockPanel LastChildFill="True">
+        <ToolBar DockPanel.Dock="Top" HorizontalAlignment="Left" Width="1542">
+            <Button Content="Open" Click="open_Click"/>
+            <Separator/>
+            <Label Content="Workspace"/>
+            <ComboBox Name="bla" ItemsSource="{Binding Control.Workspaces}" SelectedItem="{Binding Workspace}" DisplayMemberPath="Name" MinWidth="50"/>
+            <Separator/>
+            <Label Content="Stream"/>
+            <ComboBox ItemsSource="{Binding Workspace.Streams}" SelectedItem="{Binding Stream}" DisplayMemberPath="Name" MinWidth="50"/>
+            <Separator/>
+            <Label Content="Tool"/>
+            <ComboBox ItemsSource="{Binding SampleViewer.Sample.Markings}" SelectedValue="{Binding SampleViewer.ToolName}" 
+                      SelectedValuePath="Key" DisplayMemberPath="Key" MinWidth="50"/>
+            <Separator/>
+            <Label Content="View"/>
+            <ComboBox ItemsSource="{Binding ViewIndices}" SelectedValue="{Binding SampleViewer.ViewIndex}"
+                      SelectedValuePath="Key" DisplayMemberPath="Value" MinWidth="40" />
+            <Separator/>
+        </ToolBar>
+        <Grid>
+
+            <!-- CHANGE_START :2020/10/6 kitayama 理由：ステータスバー削除でできた余白を消すためマージンを変更 -->
+            <!-- <Grid Background="Black" Margin="0,-30,0,30"> -->
+            <Grid Background="Black" Margin="0,-30,0,0" Height="968" VerticalAlignment="Top">
+                <!-- CHANGE_END :2020/10/6 kitayama 理由：ステータスバー削除でできた余白を消すためマージンを変更 -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="648"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="179"/>
+                    <RowDefinition Height="8"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="13"/>
+                    <ColumnDefinition Width="101"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="220.218"/>
+                    <ColumnDefinition Width="428.782"/>
+                    <ColumnDefinition Width="471"/>
+                </Grid.ColumnDefinitions>
+                <!-- CHANGE_START :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+                <!-- <GroupBox Header="取得画像：" HorizontalAlignment="Left" Height="290" Margin="0,182,0,0" VerticalAlignment="Top" Width="358" Grid.ColumnSpan="4" FontSize="18" Foreground="White"/> -->
+                <GroupBox Header="取得画像：" HorizontalAlignment="Left" Height="290" Margin="0,182,0,0" VerticalAlignment="Top" Width="358" Grid.ColumnSpan="4" FontSize="18" Foreground="White" Visibility="Collapsed"/>
+                <!-- CHANGE_END :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False"
+                    Foreground="Gray" FontStyle="Italic" FontSize="20" Grid.Column="5" Margin="213,610,427,10" Height="28" Width="260" Grid.ColumnSpan="2">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding SampleViewer.Sample}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Stream}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style><Run Text="drag image here to process ..."/></TextBlock>
+
+                <GroupBox Header="品種:" HorizontalAlignment="Left" Height="99" VerticalAlignment="Top" Width="520" Grid.ColumnSpan="5" Foreground="White" FontSize="18">
+                    <ComboBox x:Name="Kishu_ComboBox" HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Top" Width="420" FontSize="18" AutomationProperties.Name="Kishu_ComboBox" SelectionChanged="Kishu_ComboBox_SelectionChanged"/>
+
+                </GroupBox>
+                <Label Content="ワークスペース：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.579,0.346" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Width="115" Height="34"/>
+                <Label x:Name="WorkSpece_Label" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="6,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.789,-0.692" Width="350" AutomationProperties.Name="WorkSpece_Label" BorderBrush="#FF0A0A0A" Background="#FFE0E0E0" FontSize="18" Height="30" Grid.ColumnSpan="2">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+                    </Label.Foreground>
+                </Label>
+                <!--<Label Content="品種：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.579,0.346" Foreground="White" FontSize="18" Width="65" Height="34"/>
+                <Label x:Name="hinnsyu_Label" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="28.8,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.789,-0.692" Width="350" AutomationProperties.Name="WorkSpece_Label" BorderBrush="#FF0A0A0A" Background="#FFE0E0E0" FontSize="18" Height="34">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+                    </Label.Foreground>
+                </Label>-->
+
+                <GroupBox Grid.Column="5" Header="設定：" HorizontalAlignment="Left" Height="99" Margin="40,0,0,0" VerticalAlignment="Top" Width="340" Foreground="White" FontSize="18">
+                    <Button x:Name="Set_Kishu_button" Content="品種設定" HorizontalAlignment="Left" Margin="4,3,0,0" VerticalAlignment="Top" Width="100" Height="60" Click="Button_Click" AutomationProperties.Name="Set_Kishu_button" FontWeight="Bold"/>
+
+                </GroupBox>
+                <GroupBox Grid.Column="4" Header="モード：" HorizontalAlignment="Left" Height="100" Margin="90,-1,0,0" VerticalAlignment="Top" Width="150" Foreground="White" FontSize="18" Grid.ColumnSpan="2">
+                    <Button x:Name="DetectButton" Content="検査開始" HorizontalAlignment="Left" Margin="5,2,0,7" Width="130" Click="Button_Click_3" AutomationProperties.Name="DetectButton" Background="White" FontWeight="Bold" FontSize="22"/>
+
+                </GroupBox>
+                <!-- CHANGE_START :2020/10/6 kitayama 理由：検査設定ボタンからカメラ設定ボタンに変更 -->
+                <!--<Button x:Name="Get_Image_button" Content="検査画像取得設定" Grid.Column="3" HorizontalAlignment="Left" Margin="459,28,0,0" VerticalAlignment="Top" Width="149" Height="60" FontSize="18" Click="Button_Click_2" AutomationProperties.Name="Get_Image_button"/>-->
+                <!-- DELETE_START :2021/12/19 kitayama 理由：visionproは使用しないので削除-->
+                <!-- <Button x:Name="Get_Image_button" Content="カメラ設定" Grid.Column="5" HorizontalAlignment="Left" Margin="162,28,0,0" VerticalAlignment="Top" Width="100" Height="60" FontSize="18" Click="Button_Click_2" AutomationProperties.Name="Get_Image_button" FontWeight="Bold"/>-->
+                <!-- DELETE_START :2021/12/19 kitayama 理由：visionproは使用しないので削除-->
+                <!-- CHANGE_END :2020/10/6 kitayama 理由：検査設定ボタンからカメラ設定ボタンに変更 -->
+                <!-- CHANGE_START :2020/10/8 kitayama 理由：ボタンの表記と位置を変更 -->
+                <!--<Button x:Name="Set_DIO_button" Content="デジタル入出力設定情報" Grid.Column="3" HorizontalAlignment="Left" Margin="613,28,0,0" VerticalAlignment="Top" Width="190" Height="60" FontSize="18" Click="Button_Click_1" AutomationProperties.Name="Set_DIO_button"/>-->
+                <Button x:Name="Set_DIO_button" Content="ファイル設定など" Grid.Column="5" HorizontalAlignment="Left" Margin="276,28,0,0" VerticalAlignment="Top" Width="90" Height="60" FontSize="12" Click="Button_Click_1" AutomationProperties.Name="Set_DIO_button" FontWeight="Bold"/>
+                <!-- CHANGE_END :2020/10/8 kitayama 理由：ボタンの表記と位置を変更 -->
+
+                <GroupBox Grid.Column="3" Header="撮影画像：" HorizontalAlignment="Left" Height="650" Margin="190,100,0,0" VerticalAlignment="Top" Width="1003" Foreground="White" FontSize="18" Grid.RowSpan="3" Grid.ColumnSpan="4">
+                    <v:SampleViewer x:Name="sampleViewer" AllowDrop="True" Height="770" VerticalAlignment="Top" HorizontalAlignment="Left" Width="960" Margin="10,110,0,0" Background="Blue" Visibility="Collapsed"/>
+                </GroupBox>
+                <!-- CHANGE_START :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+                <!--
+                <Label Content="ファイル名：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Width="94" Height="34"/>
+                <Label x:Name="fnamelabel" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="5,217,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" Background="#FFE0E0E0" Width="233" Height="34"/>
+                -->
+                <Label Content="ファイル名：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Width="94" Height="34" Visibility="Collapsed"/>
+                <Label x:Name="fnamelabel" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="5,217,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" Background="#FFE0E0E0" Width="233" Height="34" Visibility="Collapsed"/>
+
+                <!-- CHANGE_END :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+
+                <GroupBox Header="カメラ情報：" HorizontalAlignment="Left" Height="602" Margin="0,100,0,0" VerticalAlignment="Top" Width="310" Grid.ColumnSpan="4" FontSize="18" Foreground="White" Grid.RowSpan="3">
+
+                </GroupBox>
+
+                <!-- DELETE_START :2021/12/20 kitayama 理由：カメラ情報は使用しないので削除 -->
+                <!-- <Label Content="カメラ：" Grid.Column="1" HorizontalAlignment="Left" Margin="38.2,172,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Height="34" Width="70"/>
+                <TextBlock x:Name="camname_label" Text="" Grid.Column="1" HorizontalAlignment="Left" Margin="75.2,213,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="10" Width="200" AutomationProperties.Name="SetImagePathlabel" Height="25" TextWrapping="Wrap" Grid.ColumnSpan="3"/>
+                <Label Content="解像度：" Grid.Column="1" HorizontalAlignment="Left" Margin="52.2,254,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="80"/>
+                <Label x:Name="resolution_label" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0,258,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="136" AutomationProperties.Name="SetImagePathlabel" Height="34"/>
+                <Label Content="シャッター速度：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,304,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="130"/>
+                <Label x:Name="shutter_label" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0,304,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="136" AutomationProperties.Name="SetImagePathlabel" Height="34"/>
+                <Label Content="ゲイン：" Grid.Column="1" HorizontalAlignment="Left" Margin="68.2,354,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="70"/>
+                <Label x:Name="brightness_label" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0,352,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="136" AutomationProperties.Name="SetImagePathlabel" Height="34"/> -->
+                <!-- DELETE_END :2021/12/20 kitayama 理由：カメラ情報は使用しないので削除 -->
+
+                <!-- CHANGE_START :2020/10/6 kitayama 理由：必要なもの以外はVisibilityを変更するか削除する -->
+                <!-- <Label Content="ステータス：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,517,0,0" VerticalAlignment="Top" RenderTransformOrigin="-27.447,18.577" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Height="34" Width="88"/>
+                <Label x:Name="GetFileStatus_label" Content="待機中" Grid.Column="3" HorizontalAlignment="Left" Margin="5,517,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Background="{x:Null}" FontSize="18" AutomationProperties.Name="GetFileStatus_label" Height="34" Width="120"/> -->
+                <!-- <Label Content="画像取得先：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,556,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Width="177" Height="34"/> -->
+                <!-- ADD_START :2021/11/21 kitayama 理由：OK画像、判定不可画像の保存先を追加 -->
+                <Label Content="画像保存先：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,262,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Height="34" Width="115"/>
+                <Label Content="NG画像：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,508,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="2" Height="34" Width="115"/>
+                <Label x:Name="NGImagePathlabel" Content="E:\" Grid.Column="1" HorizontalAlignment="Left" Margin="100.2,508,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="189" AutomationProperties.Name="GetImagePathlabel" Height="34" Grid.ColumnSpan="3" />
+                <Button x:Name="NG_Open_Button" Content="NGフォルダを開く" HorizontalAlignment="Left" Margin="39,557,0,0" VerticalAlignment="Top" Width="109" Grid.Column="3" Height="33" Click="NG_Open_Button_Click"/>
+                <Label Content="判定不可：" Grid.Column="1" HorizontalAlignment="Left" Margin="4.2,390,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Height="34" Width="100" Grid.ColumnSpan="2"/>
+                <Label x:Name="INTERImagePathlabel" Content="D:\" Grid.Column="1" HorizontalAlignment="Left" Margin="97.2,394,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="12" Width="190" AutomationProperties.Name="SetImagePathlabel" Height="30" Grid.ColumnSpan="3"/>
+                <Button x:Name="INTER_Open_Button" Content="判定不可フォルダを開く" HorizontalAlignment="Left" Margin="10,433,0,0" VerticalAlignment="Top" Width="138" Grid.Column="3" Height="33" Click="INTER_Open_Button_Click"/>
+                <Label Content="OK画像：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,304,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Height="34" Width="81"/>
+                <Label x:Name="OKImagePathlabel" Content="D:\" Grid.Column="1" HorizontalAlignment="Left" Margin="99.2,308,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="12" Width="190" AutomationProperties.Name="SetImagePathlabel" Height="30" Grid.ColumnSpan="3"/>
+                <Button x:Name="OK_Open_Button" Content="OKフォルダを開く" HorizontalAlignment="Left" Margin="39,345,0,0" VerticalAlignment="Top" Width="109" Grid.Column="3" Height="33" Click="OK_Open_Button_Click"/>
+                <!-- ADD_END :2021/11/21 kitayama 理由：OK画像、判定不可画像の保存先を追加 -->
+                <!-- DELETE_START :2021/11/6 kitayama 理由：NG画像ファイル名は処理内で指定しているので削除 -->
+                <!--<Label Content="保存ファイル名：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="190"/>
+                <Label x:Name="SetImageNamelabel" Content="MMdd-HHmmss" Grid.Column="3" HorizontalAlignment="Left" Margin="0,450,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="16" Width="190" AutomationProperties.Name="SetImagePathlabel" Height="30"/>-->
+                <!-- DELETE_END :2021/11/6 kitayama 理由：NG画像ファイル名は処理内で指定しているので削除 -->
+                <!-- CHANGE_START :2021/11/27 kitayama 理由：NG画像のみ保存のチェックボックスをOK画像保存のチェックボックスに変更 -->
+                <!-- DELETE_START :2021/12/20 kitayama 理由：画像はOK/NGにかかわらず保存するので削除 -->
+                <!-- <Label Content="OK判定画像を保存：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,395,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="200"/>
+                <CheckBox x:Name="Save_OK" Content="CheckBox" Grid.Column="3" HorizontalAlignment="Left" Margin="80,405,0,0" VerticalAlignment="Top" Height="15" Width="20"/> -->
+                <!-- DELETE_END :2021/12/20 kitayama 理由：画像はOK/NGにかかわらず保存するので削除 -->
+                <!-- CHANGE_END :2021/11/27 kitayama 理由：NG画像のみ保存のチェックボックスをOK画像保存のチェックボックスに変更 -->
+                <!-- DELETE_START :2021/11/6 kitayama 理由：撮影画像はNG画像以外保存しないので削除 -->
+                <!--<Label Content="検査済画像を保存する：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,552,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="200"/>
+                <CheckBox x:Name="fMoveFile" Content="CheckBox" Grid.Column="3" HorizontalAlignment="Left" Margin="90,564,0,0" VerticalAlignment="Top" Height="15" Width="20" Visibility="Visible"/>-->
+                <!-- DELETE_END :2021/11/6 kitayama 理由：撮影画像の保存形式はbmpに固定するので削除 -->
+                <!-- <Label x:Name="DiskCapalabel" Grid.Column="1" HorizontalAlignment="Left" Margin="240,632,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="14" Grid.ColumnSpan="3" Height="34" Width="90" Content="空き容量不足" FontWeight="Bold"/> -->
+                <!-- <Label Content="破損エラー画像保存先：" Grid.Column="1" HorizontalAlignment="Left" Margin="8.2,708,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="190"/> -->
+                <Label x:Name="IsoImagePathlabel" Content="D:\" Grid.Column="3" HorizontalAlignment="Left" Margin="102,169,0,-16" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="136" AutomationProperties.Name="SetImagePathlabel" Height="34" Visibility="Collapsed" Grid.RowSpan="2" Grid.Row="2" />
+
+                <!-- DELETE_START :2021/11/6 kitayama 理由：撮影画像の保存形式はbmpに固定するので削除 -->
+                <Label Content="ファイル形式：" Grid.Column="1" HorizontalAlignment="Left" Margin="25.2,200,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="120"/>
+                <ComboBox x:Name="file_ex_box" Grid.Column="3" HorizontalAlignment="Left" Margin="8,202,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Width="136" AutomationProperties.Name="SetImagePathlabel" Height="34"/>
+                <!-- DELETE_START :2021/11/6 kitayama 理由：撮影画像の保存形式はbmpに固定するので削除 -->
+
+                <!-- <Label Content="画像取得周期(msec)：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,747,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="188"/>
+                <Label x:Name="GetImageIntervallabel" Content="300" Grid.Column="3" HorizontalAlignment="Left" Margin="100,747,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" RenderTransformOrigin="0.538,1.206" AutomationProperties.Name="GetImageIntervallabel" Height="34" Width="45"/>
+                <Label Content="画像移動周期(msec)：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,786,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="188"/>
+                <Label x:Name="MoveImageIntervallabel" Content="500" Grid.Column="3" HorizontalAlignment="Left" Margin="100,786,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" AutomationProperties.Name="MoveImageIntervallabel" Height="34" Width="45"/>
+                <Label Content="検査予定画像数：" Grid.Column="1" HorizontalAlignment="Left" Margin="40,824,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Height="34" Width="154"/>
+                <Label x:Name="PreDetectImage" Content="100" Grid.Column="3" HorizontalAlignment="Left" Margin="100,824,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Height="34" Width="45"/>
+                -->
+
+                <Label x:Name="BlankDisk" Content="100" Grid.Column="3" HorizontalAlignment="Left" Margin="65,646,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Height="34" Width="50" Grid.RowSpan="2"/>
+                <!-- <Label x:Name="HoldTimeLabel" Content="1000" Grid.Column="3" HorizontalAlignment="Left" Margin="100,904,0,0" VerticalAlignment="Top" Background="#FFE1E1E1" FontSize="18" Height="34" Width="55"/> -->
+                <!-- DELETE_START :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- DELETE_START :2021/11/14 kitayama 理由：処理時間の表示場所が足りないので一旦削除する -->
+                <!--<Label Content="処理時間(msec)" Grid.Column="6" HorizontalAlignment="Left" Margin="159.2,122,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="34" Width="120"/>
+                <Label x:Name="DetectTimeLabel" Content="0" Grid.Column="6" HorizontalAlignment="Left" Margin="181.2,170,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="60"/>-->
+                <!-- DELETE_END :2021/11/14 kitayama 理由：処理時間の表示場所が足りないので一旦削除する -->
+                <!-- DELETE_START :2021/11/3 kitayama 理由：使用しないので削除 -->
+                <!--<Label Content="合計処理時間(s)" Grid.Column="4" HorizontalAlignment="Left" Margin="63,128,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="34" Width="120" FontWeight="Bold"/>
+                <Label x:Name="sum_DetectTimeLabel" Content="0" Grid.Column="4" HorizontalAlignment="Left" Margin="95,158,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="60"/>-->
+                <!-- DELETE_END :2021/11/10 kitayama 理由：使用しないので削除 -->
+
+                <Label Content="Stream：" Grid.Column="1" HorizontalAlignment="Left" Margin="29.2,130,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="85" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="Houkou_Combo" Grid.Column="2" HorizontalAlignment="Left" Margin="6.4,130,0,0" VerticalAlignment="Top" Foreground="Black"  FontSize="16" Height="34" Width="80" IsEnabled="False" Grid.ColumnSpan="2"/>
+
+                <!-- DELETE_START :2020/10/8 kitayama 理由：撮影方向に変えるので削除 -->
+                <!--<Label Content="Stream：" Grid.Column="3" HorizontalAlignment="Left" Margin="404.8,120,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="80"/>
+                <Label x:Name="ShootLabel" Content="-" Grid.Column="3" HorizontalAlignment="Left" Margin="479.8,120,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" RenderTransformOrigin="-8.724,2.765" AutomationProperties.Name="ShootLabel" Height="34" Width="35"/>-->
+                <!-- DELETE_END :2020/10/8 kitayama 理由：撮影方向に変えるので削除 -->
+                <!-- DELETE_END :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+
+                <Label Content="品種：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Height="34" Width="80"/>
+                <!-- DELETE_START :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+                <!--<Label Content="判定" Grid.Column="4" HorizontalAlignment="Left" Margin="97,142,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="60"/>
+                <Label Content="しきい値" Grid.Column="4" HorizontalAlignment="Left" Margin="98,177,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="59"/>
+                <Label Content="スコア" Grid.Column="4" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="59"/>
+                <Label x:Name="analyze_label1" Content="Analyze 1" Grid.Column="4" HorizontalAlignment="Left" Margin="152,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="82" Grid.ColumnSpan="2"/>
+                <Label x:Name="threshold_label1" Content="0.00" Grid.Column="4" HorizontalAlignment="Left" Margin="166,176,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="50"/>
+
+                <Label x:Name="analyze_label2" Content="Analyze 2" Grid.Column="5" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="83"/>
+                <Label x:Name="threshold_label2" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="22,175,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="50"/>
+                <Label x:Name="analyze_label3" Content="Analyze 3" Grid.Column="5" HorizontalAlignment="Left" Margin="90,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="80"/>
+                <Label x:Name="threshold_label3" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="100,175,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="50"/>
+                <Label x:Name="analyze_label4" Content="Analyze 4" Grid.Column="5" HorizontalAlignment="Left" Margin="168,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="78"/>
+                <Label x:Name="threshold_label4" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="178,175,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="50"/>
+                <Label x:Name="analyze_label5" Content="Analyze 5" Grid.Column="5" HorizontalAlignment="Left" Margin="241,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="81"/>
+                <Label x:Name="threshold_label5" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="255,175,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="50"/>
+
+                <Label x:Name="analyze_label6" Content="Analyze 6" Grid.Column="5" HorizontalAlignment="Left" Margin="317,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="81"/>
+                <Label x:Name="analyze_label7" Content="Analyze 7" Grid.Column="5" HorizontalAlignment="Left" Margin="395,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="81" Grid.ColumnSpan="2"/>
+                <Label x:Name="analyze_label8" Content="Analyze 8" Grid.Column="6" HorizontalAlignment="Left" Margin="44.2,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="81"/>
+                <Label x:Name="analyze_label9" Content="Analyze 9" Grid.Column="6" HorizontalAlignment="Left" Margin="123.2,118,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="81"/>
+                <Label x:Name="analyze_label10" Content="Analyze 10" Grid.Column="6" HorizontalAlignment="Left" Margin="202.2,117,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="34" Width="95"/>-->
+                <!-- DELETE_END :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+
+
+                <!--<Label x:Name="DetectTimeLabel" Content="0.00" Grid.Column="6" HorizontalAlignment="Left" Margin="256,145,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Background="Gray" FontSize="16" Height="34" Width="50"/>
+                <Label x:Name="DetectTimeLabel2" Content="0.00" Grid.Column="6" HorizontalAlignment="Left" Margin="256,195,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Background="Gray" FontSize="16" Height="34" Width="50"/>-->
+
+                <!-- DELETE_START :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+                <!--<Label x:Name="score_label1" Content="0.00" Grid.Column="4" HorizontalAlignment="Left" Margin="166,198,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="55" Grid.ColumnSpan="2"/>
+
+                <Label x:Name="score_label2" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="22,195,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="55"/>
+                <Label x:Name="score_label3" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="96,195,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="55"/>
+                <Label x:Name="score_label4" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="178,195,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="55"/>
+                <Label x:Name="score_label5" Content="0.00" Grid.Column="5" HorizontalAlignment="Left" Margin="255,195,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="55"/>
+
+                <Label x:Name="okng_label1" Content="-" Grid.Column="4" HorizontalAlignment="Left" Margin="170,142,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="45"/>
+
+                <Label x:Name="okng_label2" Content="-" Grid.Column="5" HorizontalAlignment="Left" Margin="24,150,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="45"/>
+                <Label x:Name="okng_label3" Content="-" Grid.Column="5" HorizontalAlignment="Left" Margin="106,150,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="45"/>
+                <Label x:Name="okng_label4" Content="-" Grid.Column="5" HorizontalAlignment="Left" Margin="184,150,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="45"/>
+                <Label x:Name="okng_label5" Content="-" Grid.Column="5" HorizontalAlignment="Left" Margin="261,150,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="16" Height="34" Width="45"/>-->
+                <!-- DELETE_END :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+
+                <!-- DELETE_START :2021/12/2 kitayama 理由：緊急停止は使用しないので削除 -->
+                <!-- <Label x:Name="teisi_label" Content="緊急停止中" Grid.Column="5" HorizontalAlignment="Center" Margin="19,434,81.8,0" VerticalAlignment="Top"  Foreground="Yellow" FontSize="60" Height="100" Width="328" FontWeight="Bold" Panel.ZIndex="10" Visibility="Visible" RenderTransformOrigin="-0.02,0.324"/>-->
+                <!-- DELETE_END :2021/12/2 kitayama 理由：緊急停止は使用しないので削除 -->
+
+                <!-- DELETE_START :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+                <Label Content="総合判定：" Grid.Column="3" HorizontalAlignment="Left" Margin="215,140,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30" Height="45" Width="157" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                <Label x:Name="okng_largelabel" Content="判定不可" Grid.Column="4" HorizontalAlignment="Left" Margin="77,134,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="36" Height="57" Width="171" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                <!-- DELETE_END :2021/11/20 kitayama 理由：画面上側の表示部は使用しないので削除 -->
+
+                <!--ADD_START :2020/9/1 kitayama 理由：ViDiのsampleviewerとは別に画像を表示する処理を追加 -->
+                <Frame Name="blueframe" Content="" Grid.Column="3" HorizontalAlignment="Left" Height="480" Margin="222,237,0,0" VerticalAlignment="Top" Width="940" Background="Blue" Foreground="{x:Null}" Grid.ColumnSpan="4" Grid.RowSpan="3"/>
+                <Image Name="image1" HorizontalAlignment="Left" Height="500" Margin="212,209,0,0" VerticalAlignment="Top" Width="960"  Stretch="UniformToFill" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="4"/>
+                <!--ADD_END :2020/9/1 kitayama 理由：ViDiのsampleviewerとは別に画像を表示する処理を追加 -->
+                <GroupBox Grid.Column="5" Header="累計：" HorizontalAlignment="Left" Height="100" Margin="392,0,0,0" VerticalAlignment="Top" Width="480" RenderTransformOrigin="0.02,0.18" Foreground="White" FontSize="18" Grid.ColumnSpan="2">
+                    <!-- DELETE_START :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                    <!-- <Label Content="検査総数：" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/> -->
+                    <!-- DELETE_END :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                </GroupBox>
+
+                <!-- DELETE_START :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- <Label x:Name="Total_Detect_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="942,30,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="110"/> -->
+                <!-- DELETE_END :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- CHANGE_START :2020/10/6 kiatayama 理由：表示位置を変更 -->
+                <!-- <Label Content="検査画像数：" Grid.Column="3" HorizontalAlignment="Left" Margin="830,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="18" Height="34" Width="110"/>
+                <Label x:Name="Total_Images_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="942,60,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Height="34" Width="100"/> -->
+                <Label Content="検査総数：" Grid.Column="5" HorizontalAlignment="Left" Margin="401,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="18" Height="34" Width="87" Grid.ColumnSpan="2"/>
+                <Label x:Name="Total_Images_Label" Content="0" Grid.Column="6" HorizontalAlignment="Left" Margin="66.2,25,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FFE1E1E1" FontSize="18" Height="34" Width="90"/>
+                <!-- CHANGE_END :2020/10/6 kiatayama 理由：表示位置を変更 -->
+                <!-- DELETE_START :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- <Label Content="OK総数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1075,30,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF00FF32" FontSize="18" Height="34" Width="88"/>
+                <Label x:Name="Total_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1158,30,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="110"/> -->
+                <!-- DELETE_END :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- CHANGE_START :2020/10/6 kiatayama 理由：表示位置を変更 -->
+                <!--<Label Content="OK画像数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1058,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF00FF32" FontSize="18" Height="34" Width="100"/>
+                <Label x:Name="OK_Images_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1158,60,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="90"/>-->
+                <Label Content="OK：" Grid.Column="6" HorizontalAlignment="Left" Margin="176.2,21,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF00FF32" FontSize="18" Height="34" Width="47"/>
+                <Label x:Name="OK_Images_Label" Content="0" Grid.Column="6" HorizontalAlignment="Left" Margin="225.2,26,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FFE1E1E1" FontSize="18" Height="34" Width="90"/>
+                <!-- CHANGE_END :2020/10/6 kiatayama 理由：表示位置を変更 -->
+                <!-- DELETE_START :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- <Label Content="NG総数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1275,30,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red" FontSize="18" Height="34" Width="90"/>
+                <Label x:Name="Total_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1358,30,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="110"/> -->
+                <!-- DELETE_END :2020/10/6 kiatayama 理由：画像枚数のみにするので削除 -->
+                <!-- CHANGE_START :2020/10/6 kiatayama 理由：表示位置を変更 -->
+                <!--<Label Content="NG画像数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1258,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red" FontSize="18" Height="34" Width="100"/>
+                <Label x:Name="NG_Images_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1358,60,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" FontSize="18" Height="34" Width="90"/>-->
+                <Label Content="NG：" Grid.Column="6" HorizontalAlignment="Left" Margin="174.2,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red" FontSize="18" Height="34" Width="47"/>
+                <Label x:Name="NG_Images_Label" Content="0" Grid.Column="6" HorizontalAlignment="Left" Margin="225.2,63,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FFE1E1E1" FontSize="18" Height="34" Width="90"/>
+                <!-- CHANGE_END :2020/10/6 kiatayama 理由：表示位置を変更 -->
+
+                <!-- ADD_START :2021/11/14 kitayama 理由：判定不可の表示を追加-->
+                <Label Content="判定不可：" Grid.Column="5" HorizontalAlignment="Left" Margin="401,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF00FF32" FontSize="18" Height="34" Width="100" Grid.ColumnSpan="2"/>
+                <Label x:Name="NOR_Images_Label" Content="0" Grid.Column="6" HorizontalAlignment="Left" Margin="66.2,62,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FFE1E1E1" FontSize="18" Height="34" Width="90"/>
+                <!-- ADD_END :2021/11/14 kitayama 理由：判定不可の表示を追加-->
+
+                <!-- DELETE_START 2020/10/5 kitayama 理由：結果表示は最低限にするので削除 -->
+                <!--
+                <GroupBox Grid.Column="3" Header="個別検査結果：" HorizontalAlignment="Left" Height="920" Margin="1265,100,0,0" VerticalAlignment="Top" Width="210" FontSize="18" Foreground="White" Grid.RowSpan="2">
+                    <Label Content="Label" HorizontalAlignment="Left" Margin="121,715,0,0" VerticalAlignment="Top"/>    
+                </GroupBox>
+                -->
+                <!-- DELETE_END 2020/10/5 kitayama 理由：結果表示は最低限にするので削除 -->
+
+                <!-- CHANGE_START :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+                <!-- <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="200" Margin="21,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="3" Grid.Column="1"/> -->
+                <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="200" Margin="21,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+                <!-- CHANGE_END :2020/10/5 kitayama 理由：textbox2は画面では使用しないので、VisibilityをCollapseに変更 -->
+
+                <!-- DELETE_START :2020/10/5 kitayama 理由：結果表示は最低限にするので不要な表示を削除・非表示化する -->
+                <!--
+                <Label Content="撮影方向1　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,136,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向1　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,163,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot1_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,137,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot1_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,163,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向2　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,201,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向2　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,228,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot2_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,201,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot2_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,227,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向3　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,268,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向3　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,294,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot3_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,268,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot3_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,294,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向4　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,333,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向4　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,359,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot4_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,333,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot4_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,359,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向5　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,397,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向5　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,423,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot5_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,397,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot5_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,423,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向6　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,460,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向6　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,486,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot6_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,460,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot6_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,486,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向7　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,522,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向7　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,548,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot7_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,522,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot7_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,548,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向8　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,587,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向8　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,613,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot8_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,587,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot8_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,613,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向9　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,648,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="116"/>
+                <Label Content="撮影方向9　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,674,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="118"/>
+                <Label x:Name="Shoot9_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,648,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot9_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,674,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向10　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,711,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="123"/>
+                <Label Content="撮影方向10　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,737,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="124"/>
+                <Label x:Name="Shoot10_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,711,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot10_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,737,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                <Label Content="撮影方向11　OK数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,777,0,0" VerticalAlignment="Top" Foreground="#FF00FF32" Height="26" Width="123"/>
+                <Label Content="撮影方向11　NG数：" Grid.Column="3" HorizontalAlignment="Left" Margin="1282,803,0,0" VerticalAlignment="Top" Foreground="Red" Height="26" Width="124"/>
+                <Label x:Name="Shoot11_OK_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,777,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Width="60" Height="26"/>
+                <Label x:Name="Shoot11_NG_Label" Content="0" Grid.Column="3" HorizontalAlignment="Left" Margin="1396,803,0,0" VerticalAlignment="Top" Foreground="#FFD2F0F5" Height="26" Width="60"/>
+                -->
+                <!-- DELETE_END :2020/10/5 kitayama 理由：結果表示は最低限にするので不要な表示を削除・非表示化する -->
+                <!-- CHANGE_START :2020/10/6 kitayama 理由：カウンタリセットボタンの配置を変更 -->
+                <!-- <Button x:Name="CounterReset" Content="カウンターリセット" Grid.Column="3" HorizontalAlignment="Left" Margin="1325,890,0,0" VerticalAlignment="Top" Width="102" Click="CounterReset_Click" Height="60"/> -->
+                <Button x:Name="CounterReset" Content="リセット" Grid.Column="6" HorizontalAlignment="Left" Margin="347.2,62,0,0" VerticalAlignment="Top" Width="79" Click="CounterReset_Click" Height="30" FontWeight="Bold" FontSize="14"/>
+                <!-- CHANGE_END :2020/10/6 kitayama 理由：カウンタリセットボタンの配置を変更 -->
+                <Label Content="ディスクの空き容量(%)：" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,644,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Width="183" Height="34" Grid.RowSpan="2"/>
+                <!-- <Label Content="画像表示時間(msec)：" Grid.Column="1" HorizontalAlignment="Left" Margin="10,904,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.ColumnSpan="3" Width="183" Height="34"/> -->
+
+
+                <!-- ADD_START :2019/12/18 kitayama 理由：入出力状態を反映する部分を追加-->
+                <!-- 入出力状態を反映するrectangleをGridで整列配置-->
+                <Grid Grid.ColumnSpan="6" Margin="0,0,352,3" Grid.Column="1" Height="99" VerticalAlignment="Bottom" Grid.Row="2">
+                    <!-- 行の割り付けを絶対値で指定-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23"/>
+                        <RowDefinition Height="36"/>
+                        <RowDefinition Height="36"/>
+                    </Grid.RowDefinitions>
+                    <!-- 列の割り付けを絶対値で指定-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <!-- ADD_START :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7の欄を追加 -->
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition Width="46"/>
+                        <!-- ADD_END :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7の欄を追加 -->
+                    </Grid.ColumnDefinitions>
+                    <Label Content="入出力" Foreground="White" FontSize="10.5px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                    <Label Content="入力" Foreground="White" FontSize="12px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="1" FontWeight="Bold"/>
+                    <Label Content="出力" Foreground="White" FontSize="12px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="2" FontWeight="Bold"/>
+                    <!-- CHANGE_START :2020/10/5 kitayama 理由：16ビットに対応するためContentをBit0-7からBit8-15に変更 -->
+                    <Label Content="Bit 15" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Bit 14" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+                    <Label Content="Bit 13" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" Grid.Row="0"/>
+                    <Label Content="Bit 12" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="0"/>
+                    <Label Content="Bit 11" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="0"/>
+                    <Label Content="Bit 10" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="6" Grid.Row="0"/>
+                    <Label Content="Bit 9" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="7" Grid.Row="0"/>
+                    <Label Content="Bit 8" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="8" Grid.Row="0"/>
+                    <!-- CHANGE_END :2020/10/5 kitayama 理由：16ビットに対応するためContentをBit0-7からBit8-15に変更 -->
+                    <!-- ADD_START :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7を追加 -->
+                    <Label Content="Bit 7" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="9" Grid.Row="0"/>
+                    <Label Content="Bit 6" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="0"/>
+                    <Label Content="Bit 5" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="11" Grid.Row="0"/>
+                    <Label Content="Bit 4" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="12" Grid.Row="0"/>
+                    <Label Content="Bit 3" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="13" Grid.Row="0"/>
+                    <Label Content="Bit 2" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="14" Grid.Row="0"/>
+                    <Label Content="Bit 1" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="15" Grid.Row="0"/>
+                    <Label Content="Bit 0" Foreground="White" FontSize="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="16" Grid.Row="0"/>
+                    <!-- ADD_END :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7を追加 -->
+                    <!-- 入力状態を反映するellipseを配置-->
+                    <!-- CHANGE_START :2020/10/5 kitayama 理由：16ビットに対応するためEllipseの名前を_inp0-7から_inp8-15に変更 -->
+                    <Ellipse x:Name="ellipse_inp15" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="28" Width="28" Grid.Column="1" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp14" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="2" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp13" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="3" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp12" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="4" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp11" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="5" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp10" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="6" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp9" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="7" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp8" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="8" Grid.Row="1"/>
+                    <!-- CHANGE_END :2020/10/5 kitayama 理由：16ビットに対応するためEllipseの名前を_inp0-7から_inp8-15に変更 -->
+                    <!-- ADD_START :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7のEllipseを追加 -->
+                    <Ellipse x:Name="ellipse_inp7" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="9" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp6" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="10" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp5" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="11" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp4" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="12" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp3" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="13" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp2" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="14" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp1" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="15" Grid.Row="1"/>
+                    <Ellipse x:Name="ellipse_inp0" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="16" Grid.Row="1"/>
+                    <!-- ADD_END :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7を追加 -->
+                    <!-- 出力状態を反映するellipseを配置-->
+                    <!-- CHANGE_START :2020/10/5 kitayama 理由：16ビットに対応するためEllipseの名前を_out0-7から_out8-15に変更 -->
+                    <Ellipse x:Name="ellipse_out15" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="1" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out14" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="2" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out13" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="3" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out12" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="4" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out11" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="5" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out10" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="6" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out9" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="7" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out8" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="8" Grid.Row="2"/>
+                    <!-- CHANGE_END :2020/10/5 kitayama 理由：16ビットに対応するためEllipseの名前を_out0-7から_out8-15に変更 -->
+                    <!-- ADD_START :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7を追加 -->
+                    <Ellipse x:Name="ellipse_out7" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="9" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out6" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="10" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out5" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="11" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out4" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="12" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out3" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="13" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out2" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="14" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out1" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="15" Grid.Row="2"/>
+                    <Ellipse x:Name="ellipse_out0" Fill="Silver" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="DarkGray" StrokeThickness="2" Height="30" Width="30" Grid.Column="16" Grid.Row="2"/>
+                    <!-- ADD_END :2020/10/5 kitayama 理由：16ビットに対応するためBit0-7を追加 -->
+
+                    <!-- 罫線を描画する処理　ColumnSpamRowSpan複数行をまとめて処理している-->
+                    <!-- CHANGE_START :2020/10/5 kitayama 理由：16ビットに対応するためSpanを変更 -->
+
+                    <!-- <Border BorderBrush="White" BorderThickness="3,3,3,3" Grid.ColumnSpan="9" Grid.RowSpan="3"/> -->
+                    <Border BorderBrush="White" BorderThickness="3,3,3,3" Grid.ColumnSpan="17" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="2,0,1,0" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="9" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="11" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+                    <Border BorderBrush="White" BorderThickness="1,0,1,0" Grid.Column="15" Grid.ColumnSpan="1" Grid.RowSpan="3"/>
+
+                    <!-- <Border BorderBrush="White" BorderThickness="0,2,0,1" Grid.Row="1" Grid.ColumnSpan="9" Grid.RowSpan="1"/> -->
+                    <Border BorderBrush="White" BorderThickness="0,2,0,1" Grid.Row="1" Grid.ColumnSpan="17" Grid.RowSpan="1"/>
+                    <!-- CHANGE_END :2020/10/5 kitayama 理由：16ビットに対応するためSpanを変更 -->
+                </Grid>
+
+                <!-- DELETE_START :2021/12/22 kitayama 理由：使用しないので削除 -->
+                <!-- <Button x:Name="Capture_Button" Content="Capture" Grid.Column="3" HorizontalAlignment="Left" Margin="163,110,0,0" VerticalAlignment="Top" Width="75" Click="Capture_Button_Click" Height="0" Grid.Row="2"/> -->
+                <!-- DELETE_END :2021/12/22 kitayama 理由：使用しないので削除 -->
+
+                <!-- CHANGE_START :2021/11/10 kitayama 理由：エラー表示は使用しないので、Visibility=Collapsedにする-->
+                <!-- CHANGE_START :2020/10/23 Y.Oushu 理由：エラー表示のため -->
+                <Label x:Name="ERR_LABEL" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="0,14,0,-77" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="5" Height="72" Width="721" Background="Yellow" Foreground="Red" FontSize="20" Visibility="Collapsed"/>
+                <Label x:Name="ERR_LABEL_Hinshu" Content="" Grid.Column="5" HorizontalAlignment="Left" Margin="101,14,0,-77" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="72" Width="787" Background="Yellow" Foreground="Red" FontSize="20" Visibility="Collapsed"/>
+                <!-- CHANGE_END :2020/10/23 Y.Oushu 理由：エラー表示のため -->
+                <!-- CHANGE_END :2021/11/10 kitayama 理由：エラー表示は使用しないので、Visibility=Collapsedにする-->
+
+                <!-- DELETE_START :2021/11/14 kitayama 理由：リストボックスではなくテキストボックスで判定結果表示を行うので削除-->
+                <!-- ADD_START :2021/11/6 kitayama 理由：処理結果を一覧するためのリストを追加 -->
+                <!--<ListView x:Name="Hannteilist" ItemsSource="{Binding}" Grid.Column="6" HorizontalAlignment="Left" Height="216" Margin="278.2,526,0,0" VerticalAlignment="Top" Width="160" Grid.RowSpan="3" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ListView.Resources>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=number}">
+                                <GridViewColumnHeader Content="検査番号" Tag="number"  HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" FontSize="11" Width="50"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=score}">
+                                <GridViewColumnHeader Content="スコア" Tag="score" HorizontalContentAlignment="Center"  HorizontalAlignment="Left"  FontSize="11" Width="30"/>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=vhanntei}">
+                                <GridViewColumnHeader Content="判定" Tag="vhanntei" HorizontalContentAlignment="Center"  HorizontalAlignment="Left"  FontSize="11" Width="60"/>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>-->
+                <!-- ADD_START :2021/11/6 kitayama 理由：処理結果を一覧するためのリストを追加 -->
+                <!-- DELETE_END :2021/11/14 kitayama 理由：リストボックスではなくテキストボックスで判定結果表示を行うので削除-->
+                <!-- DELETE_START :2021/12/2 kitayama 理由：結果の一覧表示は行わないので削除 -->
+                <!-- <Button x:Name="Form6_Button" Content="結果一覧表示" Grid.Column="6" HorizontalAlignment="Left" Height="43" Margin="297.2,110.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="129" Click="Form6_Button_Click"/> -->
+                <!-- DELETE_END :2021/12/2 kitayama 理由：結果の一覧表示は行わないので削除 -->
+                <!-- ADD_START :2021/11/14 kitayama 理由：結果表示を行うテキストボックスを追加-->
+                <TextBox x:Name="textbox_Inter" Grid.Column="6" HorizontalAlignment="Left" Height="292" Margin="268.2,150,0,0" TextWrapping="Wrap" Text="1. 欠け割れ 判定不可" VerticalAlignment="Top" Width="191" FontSize="16" FontWeight="Bold"/>
+                <!-- ADD_END :2021/11/14 kitayama 理由：結果表示を行うテキストボックスを追加-->
+
+                <!-- ADD_START :2021/11/14 kitayama 理由：NG結果表示を行うテキストボックスとラベルを追加-->
+                <Label Content="判定不可画像" Grid.Column="6" HorizontalAlignment="Left" Margin="268.2,116,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="18" Height="34" Width="122"/>
+                <Label Content="NG画像" Grid.Column="6" HorizontalAlignment="Left" Margin="268.2,468,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="18" Height="34" Width="87"/>
+                <TextBox x:Name="textbox_NG" Grid.Column="6" HorizontalAlignment="Left" Height="274" Margin="268.2,502,0,0" TextWrapping="Wrap" Text="1. 欠け割れ 判定不可" VerticalAlignment="Top" Width="191" FontSize="16" FontWeight="Bold" Grid.RowSpan="3"/>
+                <!-- ADD_END :2021/11/14 kitayama 理由：NG結果表示を行うテキストボックスとラベルを追加-->
+
+                <!-- DELETE_START 2020/10/5 kitayama 理由：表示は最低限にするので削除 -->
+                <!-- <ListBox x:Name="slist" Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="955,80,0,-45" Grid.Row="1" VerticalAlignment="Top" Width="517"/> -->
+                <!-- ADD_END :2019/12/18 kitayama 理由：入出力状態を反映する部分を追加-->
+                <!-- DELETE_END 2020/10/5 kitayama 理由：結果表示は最低限にするので削除 -->
+                <!-- ADD_START :2020/10/5 kitayama 理由：撮影方向の入力個所を追加 -->
+                <!-- DELETE_START :2020/10/8 kitayama 理由：撮影方向は検査結果の欄に移すので削除 -->
+                <!--<GroupBox Grid.Column="1" Header="撮影方向：" Foreground="White" FontSize="18" HorizontalAlignment="Left" Height="70" Margin="0.2,100,0,0" VerticalAlignment="Top" Width="340" Grid.ColumnSpan="3">
+                    <ComboBox x:Name="Houkou_Combo" HorizontalAlignment="Left" Height="36" Margin="110,0,0,0" VerticalAlignment="Top" Width="80" SelectedIndex="0"/>
+                    -->
+                <!-- ADD_END :2020/10/5 kitayama 理由：撮影方向の入力個所を追加 -->
+                <!--
+                </GroupBox>-->
+                <!-- DELETE_END :2020/10/8 kitayama 理由：撮影方向は検査結果の欄に移すので削除 -->
+            </Grid>
+            <!-- DELETE_START :2020/10/6 kitayama 理由：ステータスバーは必要ないので非表示化する -->
+            <StatusBar x:Name="toolStripStatus" VerticalAlignment="Top" AutomationProperties.Name="toolStripStatus" Margin="0,1108,0,-2" Visibility="Collapsed">
+                <ProgressBar x:Name="ProgressBar1" Width="275"
+                         Height="20"
+                         Value="0" AutomationProperties.Name="ProgressBar1"
+                         />
+                <Label Content="0%" Width="81"/>
+                <Separator/>
+                <Label x:Name="toolStripStatusLabel1" Content="処理しています..." AutomationProperties.Name="toolStripStatusLabel1" Width="737"/>
+            </StatusBar>
+            <!-- DELETE_END :2020/10/6 kitayama 理由：ステータスバーは必要ないので非表示化する -->
+        </Grid>
+    </DockPanel>
+
+</Window>
