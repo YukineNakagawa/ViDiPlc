@@ -290,3 +290,7 @@ C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\�
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.exe
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.pdb
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\App.g.cs
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter_MarkupCompile.cache
