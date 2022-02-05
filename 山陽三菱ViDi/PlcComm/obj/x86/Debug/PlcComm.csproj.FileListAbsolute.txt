@@ -6,3 +6,11 @@ C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\�
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.csproj.CopyComplete
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.dll
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.pdb
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\x86\Debug\PlcComm.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\x86\Debug\PlcComm.pdb
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\x86\Debug\PLCCommLib.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\x86\Debug\PLCCommLib.xml
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\x86\Debug\PlcComm.pdb

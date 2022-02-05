@@ -1,0 +1,8 @@
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\Release\PlcComm.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\Release\PlcComm.pdb
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\Release\PLCCommLib.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\bin\Release\PLCCommLib.xml
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\Release\PlcComm.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\Release\PlcComm.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\Release\PlcComm.dll
+C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\PlcComm\obj\Release\PlcComm.pdb
