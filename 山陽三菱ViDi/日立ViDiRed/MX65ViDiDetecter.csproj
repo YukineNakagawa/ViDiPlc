@@ -32,7 +32,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -123,7 +123,11 @@
       <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="PLCCommLib">
+<<<<<<< HEAD
       <HintPath>.\PLCCommLib.dll</HintPath>
+=======
+      <HintPath>..\PlcComm\PLCCommLib.dll</HintPath>
+>>>>>>> 69c906e42e03221923f14a0f7a0cd77863d3eb9c
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
