@@ -2166,7 +2166,3 @@ C:\Users\kitay\Desktop\ViDiプログラム\1223日立ViDiRed\obj\x64\Release\MX6
 C:\Users\kitay\Desktop\ViDiプログラム\1223日立ViDiRed\obj\x64\Release\MX65ViDiDetecter.application
 C:\Users\kitay\Desktop\ViDiプログラム\1223日立ViDiRed\obj\x64\Release\MX65ViDiDetecter.exe
 C:\Users\kitay\Desktop\ViDiプログラム\1223日立ViDiRed\obj\x64\Release\MX65ViDiDetecter.pdb
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\bin\x64\Release\Cognex.VisionPro.Blob.dll
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\bin\x64\Release\Cognex.VisionPro.dll
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\bin\x64\Release\Cognex.VisionPro.xml
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\bin\x64\Release\Cognex.VisionPro.Blob.xml

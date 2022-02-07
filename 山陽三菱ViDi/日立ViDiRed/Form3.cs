@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CdioCs;
+using System.IO;
+//DELETE_START :2022/1/30 kitayama 理由：DIOは使用しないので削除
+//using CdioCs;
+//DELETE_END :2022/1/30 kitayama 理由：DIOは使用しないので削除
+
 
 //外部入出力デバイスの信号割り当て画面
 //MCプロトコル　信号の割り当てを表示するようにテキストを変更する
@@ -20,14 +24,14 @@ namespace　Example.Runtime
         //ADD_END :2019/11/11 kitayama 理由：log4netのインスタンス取得
 
         //ADD_START :2019/11/1 kawabata 理由：デジタル入出力処理追加
-        Cdio Dio;
+        //Cdio Dio;
         //ADD_END :2019/11/1 kawabata 理由：デジタル入出力処理追加
 
         //ADD_START :2021/12/2 kitayama 理由：mainwindowに設定を反映するため追加
         MainWindow f1;
         //ADD_END :2021/12/2 kitayama 理由：mainwindowに設定を反映するため追加
 
-        public Form3(MainWindow mainWindow, Cdio Dio)
+        public Form3(MainWindow mainWindow)
         {
             InitializeComponent();
             //ADD_START :2021/12/2 kitayama 理由：mainwindowに設定を反映するため追加
@@ -57,25 +61,7 @@ namespace　Example.Runtime
             //ADD_START :2019/11/14 kitayama 理由：ログ
             logger.Debug("Form3　ロード");
             //ADD_END :2019/11/14 kitayama 理由：ログ
-            Device_Name_label.Text = MainWindow.Device;      //デバイス名を表示
 
-            //    //ADD_START :2019/11/1 kawabata 理由：デジタル入出力処理追加
-            //    //デジタル入出力デバイスのインスタンスがあるか？
-            //    if (Dio == null)
-            //    {
-            //        RestButton.Enabled = false;     //リセットボタン　押せなくする。。
-            //        //ADD_START :2019/11/14 kitayama 理由：ログ
-            //        logger.Debug($"Form3　(Dio==null)={Dio == null}(true)  RestButton.Enabled ={RestButton.Enabled}");
-            //        //ADD_END :2019/11/14 kitayama 理由：ログ
-            //    }
-            //    else
-            //    {
-            //        RestButton.Enabled = true;     //リセットボタン　押せる。                               
-            //        //ADD_START :2019/11/14 kitayama 理由：ログ
-            //        logger.Debug($"Form3　(Dio==null)={Dio == null}(false)  RestButton.Enabled ={RestButton.Enabled}");
-            //        //ADD_END :2019/11/14 kitayama 理由：ログ
-            //    }
-            //    //ADD_END :2019/11/1 kawabata 理由：デジタル入出力処理追加
         }
 
         private void label28_Click(object sender, EventArgs e)
@@ -117,52 +103,64 @@ namespace　Example.Runtime
 
 
         }
+
+        private void set_button2_Click(object sender, EventArgs e)
+        {
+            if (OK_Imagebox2.Text == "" | Inter_Imagebox2.Text == "" | NG_Imagebox2.Text == "")
+            {
+                //保存先が入力されていないとエラーとする
+                MessageBox.Show("入力されていない保存先があります。すべての画像保存先を入力してください。",
+                   "エラー",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+            }
+            else
+            {
+                //設定内容をxmlファイルに反映する
+                Change_XML change_XML;
+                change_XML = new Change_XML();
+                change_XML.WriteXML();
+
+                //mainwindowの変数に入力された内容を設定する
+                MainWindow.sImagePath[3] = OK_Imagebox2.Text;
+                MainWindow.sImagePath[4] = Inter_Imagebox2.Text;
+                MainWindow.sImagePath[5] = NG_Imagebox2.Text;
+
+                MessageBox.Show("画像保存先を設定しました。", "設定", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
         //ADD_END :2021/12/2 kitayama 理由：画像保存先設定処理を追加
 
-        //ADD_START :2019/11/1 kawabata 理由：リセットボタン追加
-        /// <summary>
-        /// 出力リセットボタン
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void RestButton_Click(object sender, EventArgs e)
+
+        //DELETE_START :2022/2/5 kitayama 理由：今回は実装しない方針なので削除
+        ////ADD_START :2022/1/30 kitayama 理由：画像削除機能を追加
+        //private void button2_Click(object sender, EventArgs e)
         //{
-        //    //ADD_START :2019/11/14 kitayama 理由：ログ
-        //    logger.Debug("Form3　リセットボタン");
-        //    //ADD_END :2019/11/14 kitayama 理由：ログ
+        //    DateTime dt = new DateTime();
+        //    dt = DateTime.Now;
 
-        //    int iRet = 0;
-        //    //メッセージボックスを表示する
-        //    DialogResult result = MessageBox.Show("出力信号を全てOFFにして宜しいでしょうか？",
-        //        "質問",
-        //        MessageBoxButtons.YesNo,
-        //        MessageBoxIcon.Exclamation,
-        //        MessageBoxDefaultButton.Button2);
+        //    //OK画像保存フォルダ内の画像を古い順に取得
+        //    string[] okfiles = Directory.GetFiles(MainWindow.sImagePath[0],$"*.{MainWindow.file_ext}")
+        //        .OrderBy(f => File.GetCreationTime(f)).ToArray();
 
-        //    //何が選択されたか調べる
-        //    if (result == DialogResult.Yes)
+        //    //ファイル削除用ループ
+        //    foreach (string str in okfiles)
         //    {
-        //        //ADD_START :2019/11/11 kitayama 理由：ログ
-        //        logger.Info("Form3 リセットボタン＞はい＞出力リセット");
-        //        //ADD_END :2019/11/11 kitayama 理由：ログ
-
-        //        //出力BITをすべてOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 0, 0);            //REDY信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 1, 0);            //検査中信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 2, 0);            //OK信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 3, 0);            //NG信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 4, 0);            //品種信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 5, 0);            //品種信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 6, 0);            //品種信号をOFF
-        //        iRet = Dio.OutBit(MainWindow.sIndex, 7, 0);            //品種信号をOFF
-        //    }else
-        //    {
-        //        //リセットしない。
-        //        //ADD_START :2019/11/14 kitayama 理由：ログ
-        //        logger.Debug($"Form3　リセットボタン＞いいえ＞出力リセットしない");
-        //        //ADD_END :2019/11/14 kitayama 理由：ログ
+        //        if (File.GetCreationTime(str) <= dt.AddDays(-(int)numericUpDown1.Value))
+        //        {
+        //            //ファイルが指定日付より古い場合は削除する
+        //            File.Delete(str);
+        //        }
+        //        else 
+        //        {
+        //            //古い順に見ているため、指定日付より新しいファイルが出てきた時点で削除用ループを抜ける
+        //            break;
+        //        }
         //    }
         //}
-        //ADD_END :2019/11/1 kawabata 理由：リセットボタン追加
+        ////ADD_END :2022/1/30 kitayama 理由：画像削除機能を追加
+        //DELETE_END :2022/2/5 kitayama 理由：今回は実装しない方針なので削除
+
     }
 }

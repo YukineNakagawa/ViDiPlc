@@ -29,6 +29,7 @@ using System.Drawing.Imaging;
 //ADD_START :2021/11/3 kitayama 理由：処理結果を表示するリストを使用する際に必要なので追加
 using System.Collections.ObjectModel;
 //ADD_END :2021/11/3 kitayama 理由：処理結果を表示するリストを使用する際に必要なので追加
+using PLCCommLib;
 
 ////////////////////////////////////////////////////////////////////////////////
 ///     三菱電機殿向け　ViDi検査　ソフトウェア
@@ -82,12 +83,15 @@ namespace Example.Runtime
         //public static bool startflag = false;
         //DELETE_END :2021/11/20 kitayama 理由：使用していないフラグを削除
         public static bool bDetectFlag = false;
+        //CHANGE_START :2022/2/5 kitayama 理由：ワンショットモード時の保存先を追加
         //CHANGE_START :2021/11/27 kitayama 理由：保存先をOK画像、NG画像、判定不可画像の配列に変更
         //[0]：OK画像保存パス、[1]：判定不可画像保存パス、[2]：NG画像保存パス
-        public static string[] sImagePath = new string[3];
+        //[3]：ワンショットOK保存先、[4]：ワンショット判定不可保存先、[5]：ワンショットNG保存先
+        public static string[] sImagePath = new string[6];
         //public static string sGetImagePath = "";
         //public static string sSetImagePath = "";
         //CHANGE_END :2021/11/27 kitayama 理由：保存先をOK画像、NG画像、判定不可画像の配列に変更
+        //CHANGE_END :2022/2/5 kitayama 理由：ワンショットモード時の保存先を追加
         public static int iGetImageInterval = 0;
         public static int iMoveImageInterval = 0;
         public static int iHoldTime = 1000;
@@ -385,11 +389,15 @@ namespace Example.Runtime
             //DELETE_END :2021/11/3 kitayama 理由：NGファイル保存チェックは使用しないので削除
             #endregion
 
+            //TEST パスを仮に設定する
             //ADD_START :2022/1/9 kitayama 理由：保存先フォルダ格納変数に適当なパスを設定しておく処理を追加
             //パスが設定されていないと変数がnullでエラーとなるため
             sImagePath[0] = @"C:\1031test";
             sImagePath[1] = @"C:\1031test";
             sImagePath[2] = @"C:\1031test";
+            sImagePath[3] = @"C:\1031test";
+            sImagePath[4] = @"C:\1031test";
+            sImagePath[5] = @"C:\1031test";
             //ADD_END :2022/1/9 kitayama 理由：保存先フォルダ格納変数に適当なパスを設定しておく処理を追加
 
             ///////////////////////////////////////////////////////////////////////////
@@ -464,9 +472,34 @@ namespace Example.Runtime
                 if (sImagePath[j] == "")
                 {
                     logger.Error(" 保存先に何も入力されていない");
+                    //ADD_START :2022/2/5 kitayama 理由：保存先が入力されていない場合のメッセージを追加
+                    string path_err = "";
+                    switch(j)
+                    {
+                        case 0:
+                            path_err = "連続動作モード：OK";
+                            break;
+                        case 1:
+                            path_err = "連続動作モード：判定不可";
+                            break;
+                        case 2:
+                            path_err = "連続動作モード：NG";
+                            break;
+                        case 3:
+                            path_err = "ワンショットモード：OK";
+                            break;
+                        case 4:
+                            path_err = "ワンショットモード：判定不可";
+                            break;
+                        case 5:
+                            path_err = "ワンショットモード：NG";
+                            break;
 
-                    MessageBoxResult result = MessageBox.Show("設定値の読み取りに失敗しました。\n設定ファイルを確認してください。",
-                    "設定値読み取りエラー",
+                    }
+                    //ADD_END :2022/2/5 kitayama 理由：保存先が入力されていない場合のメッセージを追加
+
+                    MessageBoxResult result = MessageBox.Show($"{path_err}画像保存先が入力されていません。",
+                    "保存先エラー",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
                     bInit = false;
@@ -476,8 +509,10 @@ namespace Example.Runtime
                     //2020.10.22 Y.Oushu Comment Out logger.Debug("保存先に何か入力されている ");
 
                     // nakagawa 2020/02/04 変更
+                    //2022/2/5 kitayamaメイン画面が最新版で無かったのでエラーが発生していた。
+                    //最新版にしたので元に戻した
                     //ADD_START :2022/2/1 kitayama 理由：警告表示の処理を追加
-                    //disk_warn.Visibility = Visibility.Hidden;
+                    disk_warn.Visibility = Visibility.Hidden;
                     //ADD_END :2022/2/1 kitayama 理由：警告表示の処理を追加
 
                     string dSetImageDrive = sImagePath[j];
@@ -497,7 +532,9 @@ namespace Example.Runtime
                         if (lBlankDisk < fBlankrate)
                         {
                             // nakagawa 2020/02/04 変更
-                            //disk_warn.Visibility = Visibility.Visible;
+                            //2022/2/5 kitayamaメイン画面が最新版で無かったのでエラーが発生していた。
+                            //最新版にしたので元に戻した
+                            disk_warn.Visibility = Visibility.Visible;
                         }
                         //ADD_END :2022/2/1 kitayama 理由：空き容量不足警告を表示する処理を追加
 
@@ -888,6 +925,14 @@ namespace Example.Runtime
                                 hanntei_num++;
                                 //ADD_END :2021/11/23 kitayama 理由：判定結果を格納する処理を追加
 
+                                //ADD_START :2022/2/3 kitayama 理由：総合判定を格納する処理を追加
+                                if (h_flag != Hanntei.NG)
+                                {
+                                    //現在の総合判定がNG以外なら、総合判定を判定不可に更新する
+                                    h_flag = Hanntei.NOR;
+                                }
+                                //ADD_END :2022/2/3 kitayama 理由：総合判定を格納する処理を追加
+
                                 //DELETE_START :2022/2/2 kitayama 理由：結果表示はスタックを使用するので削除
                                 ////ADD_START :2021/12/4 kitayama 理由：判定結果表示処理を追加
                                 ////結果がテキストボックスの上に追加されていくようにする
@@ -948,6 +993,10 @@ namespace Example.Runtime
                             case Hanntei.NG:
                                 v_kekka[2, a_index, v_num] = V_CONST[2];
                                 logger.Debug($"取得部判定表示 判定：NG");
+
+                                //ADD_START :2022/2/3 kitayama 理由：総合判定を格納する処理を追加
+                                h_flag = Hanntei.NG;
+                                //ADD_END :2022/2/3 kitayama 理由：総合判定を格納する処理を追加
 
                                 //DELETE_START :2022/2/2 kitayama 理由：結果表示はスタックを使用するので削除
                                 ////ADD_START :2021/12/4 kitayama 理由：判定結果表示処理を追加
@@ -1012,6 +1061,10 @@ namespace Example.Runtime
 
                     //ADD_START :2021/11/25 kitayama 理由：1121処理フローと合わせた表示処理を追加
 
+                    //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+                    string path_save = "";
+                    //ADD_END :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+
                     //ViDi処理のループを抜けた後にテキストボックスに結果を表示する処理
                     if (v_hanntei==Hanntei.NG)
                     {
@@ -1043,7 +1096,10 @@ namespace Example.Runtime
                             textbox_NG.Text += ng_text.Pop()+"\r\n";
                         }
                         //ADD_END :2022/1/25 kitayama 理由：スタックから結果を表示する処理を追加
-
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+                        //ワンショットモードでは5を設定する
+                        path_save = sImagePath[2];
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
                     }
                     else if(0<hanntei_num & hanntei_num < ANALYZE_NUM)
                     {
@@ -1074,46 +1130,37 @@ namespace Example.Runtime
                             textbox_Inter.Text += inter_text.Pop() + "\r\n";
                         }
                         //ADD_END :2022/1/25 kitayama 理由：スタックから結果を表示する処理を追加
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+                        //ワンショットモードでは4を設定する
+                        path_save = sImagePath[1];
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
 
                     }
                     else if(hanntei_num==0)
                     {
                         //個別画像判定：OK
-
-
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+                        //ワンショットモードでは3を設定する
+                        path_save = sImagePath[0];
+                        //ADD_START :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
                     }
 
                     //一旦ここで保存する。処理速度が遅くなるようならここで保存用配列に格納して、保存処理自体は別スレッドに分ける。
                     //ADD_START :2021/11/27 kitayama 理由：画像の保存処理を追加
 
-                    //DELETE_START :2022/1/25 kitayama 理由：拡張子は固定なので削除
-                    //fext = file_ex_box.SelectedItem.ToString();
-                    //DELETE_END :2022/1/25 kitayama 理由：拡張子は固定なので削除
-                    //0118　メイン画面のファイル形式が設定されていない
-                    //結果表示用の配列のforrループで２秒程度かかっているので、nullが出たらループ終了など、使用範囲を考える必要がある
-
-                    //DELETE_START :2021/12/22 kitayama 理由：すべての画像を保存するのでif文を削除
-                    //if ( hanntei_num != 0 )
-                    //{
-                    //if (file_ex_box.SelectedIndex == 0)
-                    //{
-                    //    bmpimages[v_num].Save(sImagePath[(int)v_hanntei] + DateTime.Now.ToString() + "." + fext, System.Drawing.Imaging.ImageFormat.Bmp);
-                    //}
-                    //else if (file_ex_box.SelectedIndex == 1)
-                    //{
-                    //    bmpimages[v_num].Save(sImagePath[(int)v_hanntei] + DateTime.Now.ToString() + "." + fext, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    //}
-                    //DELETE_END :2021/12/22 kitayama 理由：すべての画像を保存するのでif文を削除
-
+                    //ADD_END :2022/2/5 kitayama 理由：画像の保存先を設定する処理を追加
+                    //CHANGE_START :2022/2/5 kitayama 理由：ファイル名に年月日を追加した形式に変更
                     //ADD_START :2022/1/26 kitayama 理由：カメラで撮影した画像をbmpで保存する処理を追加
                     //カメラから画像を取り込む場合はこちらの処理を使用する
+                    //bmpimages[v_num].Save(path_save + DateTime.Now.ToString("yyyyMMdd-HHmmssfff") + "." + fext, System.Drawing.Imaging.ImageFormat.Bmp);
                     //bmpimages[v_num].Save(sImagePath[(int)v_hanntei] + DateTime.Now.ToString() + "." + fext, System.Drawing.Imaging.ImageFormat.Bmp);
                     //ADD_END :2022/1/26 kitayama 理由：カメラで撮影した画像をbmpで保存する処理を追加
 
                     //TEST カメラなしでフォルダから画像を取得する場合の保存処理
                     //File.Move(d_files[0], $@"C:\1031test\{DateTime.Now.ToString()}.{fext}");
-                    File.Move(d_files[0], $@"C:\1031test\NG_image{v_num}_{DateTime.Now.ToString($"MMdd-HHmmssfff")}.{fext}");
-
+                    File.Move(d_files[0], $@"{path_save}\NG_image{v_num}_{DateTime.Now.ToString($"yyyyMMdd-HHmmssfff")}.{fext}");
+                    //File.Move(d_files[0], $@"C:\1031test\NG_image{v_num}_{DateTime.Now.ToString($"MMdd-HHmmssfff")}.{fext}");
+                    //CHANGE_END :2022/2/5 kitayama 理由：ファイル名に年月日を追加した形式に変更
                     //DELETE_START :2021/12/22 kitayama 理由：すべての画像を保存するのでif文を削除
                     //}
                     //DELETE_END :2021/12/22 kitayama 理由：すべての画像を保存するのでif文を削除
@@ -1259,7 +1306,9 @@ namespace Example.Runtime
                         if( lBlankDisk < fBlankrate ) 
                         {
                             // nakagawa 2020/02/04 変更
-                            //disk_warn.Visibility = Visibility.Visible;
+                            //2022/2/5 kitayamaメイン画面が最新版で無かったのでエラーが発生していた。
+                            //最新版にしたので元に戻した
+                            disk_warn.Visibility = Visibility.Visible;
                         }
 
                     }
@@ -1268,16 +1317,28 @@ namespace Example.Runtime
                         //OK/NG数のカウント処理
                         //CHANGE_START :2021/11/13 kitayama 理由：NGフラグの条件を変更
                         //if (ngflag == true || errflag == true)
-                        if (h_flag == Hanntei.NG || errflag == true)
+                    if (h_flag == Hanntei.NG || errflag == true)
                     //CHANGE_END :2021/11/13 kitayama 理由：NGフラグの条件を変更
                     {
                         //NG・エラーが出ている場合はNGをカウント
                         iTotal_NG++;
+
+                        //ADD_START :2022/2/3 kitayama 理由：総合判定を表示する処理を追加
+                        okng_largelabel.Content = "NG";
+                        okng_largelabel.Foreground = new SolidColorBrush(Colors.Red);
+                        //ADD_END :2022/2/3 kitayama 理由：総合判定を格納する処理を追加
+
                     }
                     else if(h_flag==Hanntei.NOR && errflag == false)
                     {
                         //判定不可をカウント
                         iTotal_NOR++;
+
+                        //ADD_START :2022/2/3 kitayama 理由：総合判定を表示する処理を追加
+                        okng_largelabel.Content = "判定不可";
+                        okng_largelabel.Foreground = new SolidColorBrush(Colors.White);
+                        //ADD_END :2022/2/3 kitayama 理由：総合判定を表示する処理を追加
+
                     }
                     //CHANGE_START :2021/11/13 kitayama 理由：NGフラグの条件を変更
                     //else if (ngflag == false && errflag == false)
@@ -1286,6 +1347,11 @@ namespace Example.Runtime
                     {
                         //NGもエラーも出てない場合はOKをカウント
                         iTotal_OK++;
+                        //ADD_START :2022/2/3 kitayama 理由：総合判定を表示する処理を追加
+                        okng_largelabel.Content = "OK";
+                        okng_largelabel.Foreground = new SolidColorBrush(Colors.Lime);
+                        //ADD_END :2022 / 2 / 3 kitayama 理由：総合判定を表示する処理を追加
+
                         //DELETE_START :2021/11/23 kitayama 理由：表示はしないので削除
                         //ここで総合判定が確定するので表示色を緑にする
                         //okng_largelabel.Foreground = new SolidColorBrush(Colors.Lime);
@@ -2461,8 +2527,10 @@ namespace Example.Runtime
             //System.Windows.Forms.Form form = new Form5();
 
             // nakagawa 2020/02/04 変更
-            //System.Windows.Forms.Form form = new Form5(this);
-            System.Windows.Forms.Form form = new Form5();
+            // 2022/2/5 kitayama Form5に更新が反映されていなかったのでエラーが発生していた。
+            //　Form5を最新にしたので元に戻した。
+            System.Windows.Forms.Form form = new Form5(this);
+            //System.Windows.Forms.Form form = new Form5();
 
             //CHANGE_END :2022/1/9 kitayama 理由：Form4にmainwindowの値を渡すためForm5が引数をとるように変更
 
@@ -2484,8 +2552,10 @@ namespace Example.Runtime
             //2020.10.22 Y.Oushu Comment Out logger.Debug("DIO確認ボタン　Form3開く");
 
             // nakagawa 2020/02/04 変更
-            //System.Windows.Forms.Form form = new Form3(this);
-            System.Windows.Forms.Form form = new Form3(this, dio);
+            // 2022/2/5 kitayama Form3に更新が反映されていなかったのでエラーが発生していた。
+            //　Form3を最新にしたので元に戻した。
+            System.Windows.Forms.Form form = new Form3(this);
+            //System.Windows.Forms.Form form = new Form3(this,dio);
             form.Show();
         }
 

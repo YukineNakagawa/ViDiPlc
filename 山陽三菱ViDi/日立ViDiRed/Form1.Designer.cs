@@ -655,6 +655,7 @@
             this.set_button.BackColor = System.Drawing.SystemColors.Control;
             this.set_button.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.set_button.Location = new System.Drawing.Point(940, 556);
+            this.set_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.set_button.Name = "set_button";
             this.set_button.Size = new System.Drawing.Size(124, 48);
             this.set_button.TabIndex = 3;
@@ -666,20 +667,21 @@
             // 
             this.numericUpDown_u00.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u00.DecimalPlaces = 2;
-            this.numericUpDown_u00.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u00.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u00.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u00.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u00.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u00.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u00.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u00.Name = "numericUpDown_u00";
-            this.numericUpDown_u00.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u00.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u00.TabIndex = 1;
             // 
             // label1
@@ -687,7 +689,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(98, 11);
+            this.label1.Location = new System.Drawing.Point(102, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 1;
@@ -698,7 +700,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(198, 11);
+            this.label2.Location = new System.Drawing.Point(204, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 6;
@@ -709,7 +711,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(298, 11);
+            this.label3.Location = new System.Drawing.Point(306, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 7;
@@ -720,7 +722,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(398, 11);
+            this.label4.Location = new System.Drawing.Point(408, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 8;
@@ -731,7 +733,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(498, 11);
+            this.label5.Location = new System.Drawing.Point(510, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 9;
@@ -746,7 +748,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u01.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u01.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u01.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u01.Minimum = new decimal(new int[] {
             1,
             0,
@@ -765,7 +768,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u02.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u02.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u02.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u02.Minimum = new decimal(new int[] {
             1,
             0,
@@ -784,7 +788,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u03.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u03.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u03.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u03.Minimum = new decimal(new int[] {
             1,
             0,
@@ -803,7 +808,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u04.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u04.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u04.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u04.Minimum = new decimal(new int[] {
             1,
             0,
@@ -815,6 +821,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 11;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -826,7 +833,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 5, 0);
@@ -859,13 +866,14 @@
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown_l09, 10, 2);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown_u09, 10, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 45);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 44);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1097, 129);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // label6
@@ -873,7 +881,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(598, 11);
+            this.label6.Location = new System.Drawing.Point(612, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 29;
@@ -884,7 +892,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(698, 11);
+            this.label7.Location = new System.Drawing.Point(714, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 17);
             this.label7.TabIndex = 30;
@@ -895,7 +903,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(798, 11);
+            this.label8.Location = new System.Drawing.Point(816, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 17);
             this.label8.TabIndex = 31;
@@ -906,7 +914,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(898, 11);
+            this.label9.Location = new System.Drawing.Point(918, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 17);
             this.label9.TabIndex = 32;
@@ -917,7 +925,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(998, 11);
+            this.label10.Location = new System.Drawing.Point(1020, 13);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 17);
             this.label10.TabIndex = 33;
@@ -928,7 +936,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(3, 97);
+            this.label12.Location = new System.Drawing.Point(5, 99);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 14);
             this.label12.TabIndex = 35;
@@ -943,7 +951,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l00.Location = new System.Drawing.Point(98, 93);
+            this.numericUpDown_l00.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l00.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l00.Name = "numericUpDown_l00";
             this.numericUpDown_l00.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l00.TabIndex = 19;
@@ -957,7 +966,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l01.Location = new System.Drawing.Point(198, 93);
+            this.numericUpDown_l01.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l01.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l01.Minimum = new decimal(new int[] {
             1,
             0,
@@ -976,7 +986,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l02.Location = new System.Drawing.Point(298, 93);
+            this.numericUpDown_l02.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l02.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l02.Minimum = new decimal(new int[] {
             1,
             0,
@@ -995,7 +1006,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l03.Location = new System.Drawing.Point(398, 93);
+            this.numericUpDown_l03.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l03.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l03.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1014,7 +1026,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l04.Location = new System.Drawing.Point(498, 93);
+            this.numericUpDown_l04.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l04.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l04.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1033,7 +1046,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l05.Location = new System.Drawing.Point(598, 93);
+            this.numericUpDown_l05.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l05.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l05.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1052,7 +1066,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u05.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u05.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u05.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u05.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1071,7 +1086,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l06.Location = new System.Drawing.Point(698, 93);
+            this.numericUpDown_l06.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l06.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l06.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1090,7 +1106,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u06.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u06.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u06.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u06.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1109,7 +1126,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l07.Location = new System.Drawing.Point(798, 93);
+            this.numericUpDown_l07.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l07.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l07.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1128,7 +1146,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u07.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u07.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u07.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u07.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1147,7 +1166,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l08.Location = new System.Drawing.Point(898, 93);
+            this.numericUpDown_l08.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l08.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l08.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1166,7 +1186,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u08.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u08.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u08.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u08.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1185,7 +1206,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l09.Location = new System.Drawing.Point(998, 93);
+            this.numericUpDown_l09.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l09.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l09.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1204,7 +1226,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u09.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u09.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u09.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u09.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1219,7 +1242,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(3, 53);
+            this.label11.Location = new System.Drawing.Point(5, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 14);
             this.label11.TabIndex = 34;
@@ -1228,9 +1251,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(87, 574);
+            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Location = new System.Drawing.Point(80, 539);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(345, 15);
+            this.label13.Size = new System.Drawing.Size(422, 17);
             this.label13.TabIndex = 15;
             this.label13.Text = "しきい値下限を-1に設定したAnalyzeで検査を終了します";
             // 
@@ -1261,6 +1285,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(12, 41);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1179, 462);
             this.panel1.TabIndex = 11;
@@ -1269,7 +1294,7 @@
             // 
             this.label155.AutoSize = true;
             this.label155.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label155.Location = new System.Drawing.Point(32, 1755);
+            this.label155.Location = new System.Drawing.Point(21, 1750);
             this.label155.Name = "label155";
             this.label155.Size = new System.Drawing.Size(95, 19);
             this.label155.TabIndex = 36;
@@ -1277,6 +1302,7 @@
             // 
             // tableLayoutPanel11
             // 
+            this.tableLayoutPanel11.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel11.ColumnCount = 11;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -1288,7 +1314,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel11.Controls.Add(this.label142, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.label143, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.label144, 5, 0);
@@ -1321,14 +1347,15 @@
             this.tableLayoutPanel11.Controls.Add(this.numericUpDown_lA9, 10, 2);
             this.tableLayoutPanel11.Controls.Add(this.numericUpDown_uA9, 10, 1);
             this.tableLayoutPanel11.Controls.Add(this.label153, 0, 1);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(30, 1777);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(17, 1778);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1097, 129);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel11.TabIndex = 35;
             // 
             // label142
@@ -1336,7 +1363,7 @@
             this.label142.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label142.AutoSize = true;
             this.label142.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label142.Location = new System.Drawing.Point(98, 11);
+            this.label142.Location = new System.Drawing.Point(102, 13);
             this.label142.Name = "label142";
             this.label142.Size = new System.Drawing.Size(82, 17);
             this.label142.TabIndex = 1;
@@ -1347,7 +1374,7 @@
             this.label143.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label143.AutoSize = true;
             this.label143.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label143.Location = new System.Drawing.Point(198, 11);
+            this.label143.Location = new System.Drawing.Point(204, 13);
             this.label143.Name = "label143";
             this.label143.Size = new System.Drawing.Size(82, 17);
             this.label143.TabIndex = 6;
@@ -1358,7 +1385,7 @@
             this.label144.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label144.AutoSize = true;
             this.label144.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label144.Location = new System.Drawing.Point(498, 11);
+            this.label144.Location = new System.Drawing.Point(510, 13);
             this.label144.Name = "label144";
             this.label144.Size = new System.Drawing.Size(82, 17);
             this.label144.TabIndex = 9;
@@ -1369,7 +1396,7 @@
             this.label145.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label145.AutoSize = true;
             this.label145.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label145.Location = new System.Drawing.Point(298, 11);
+            this.label145.Location = new System.Drawing.Point(306, 13);
             this.label145.Name = "label145";
             this.label145.Size = new System.Drawing.Size(82, 17);
             this.label145.TabIndex = 7;
@@ -1380,7 +1407,7 @@
             this.label146.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label146.AutoSize = true;
             this.label146.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label146.Location = new System.Drawing.Point(398, 11);
+            this.label146.Location = new System.Drawing.Point(408, 13);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(82, 17);
             this.label146.TabIndex = 8;
@@ -1391,7 +1418,7 @@
             this.label147.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label147.AutoSize = true;
             this.label147.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label147.Location = new System.Drawing.Point(598, 11);
+            this.label147.Location = new System.Drawing.Point(612, 13);
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(82, 17);
             this.label147.TabIndex = 29;
@@ -1402,7 +1429,7 @@
             this.label148.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label148.AutoSize = true;
             this.label148.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label148.Location = new System.Drawing.Point(698, 11);
+            this.label148.Location = new System.Drawing.Point(714, 13);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(82, 17);
             this.label148.TabIndex = 30;
@@ -1413,7 +1440,7 @@
             this.label149.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label149.AutoSize = true;
             this.label149.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label149.Location = new System.Drawing.Point(798, 11);
+            this.label149.Location = new System.Drawing.Point(816, 13);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(82, 17);
             this.label149.TabIndex = 31;
@@ -1424,7 +1451,7 @@
             this.label150.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label150.AutoSize = true;
             this.label150.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label150.Location = new System.Drawing.Point(898, 11);
+            this.label150.Location = new System.Drawing.Point(918, 13);
             this.label150.Name = "label150";
             this.label150.Size = new System.Drawing.Size(82, 17);
             this.label150.TabIndex = 32;
@@ -1435,7 +1462,7 @@
             this.label151.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label151.AutoSize = true;
             this.label151.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label151.Location = new System.Drawing.Point(998, 11);
+            this.label151.Location = new System.Drawing.Point(1020, 13);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(92, 17);
             this.label151.TabIndex = 33;
@@ -1446,7 +1473,7 @@
             this.label152.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label152.AutoSize = true;
             this.label152.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label152.Location = new System.Drawing.Point(3, 97);
+            this.label152.Location = new System.Drawing.Point(5, 99);
             this.label152.Name = "label152";
             this.label152.Size = new System.Drawing.Size(87, 14);
             this.label152.TabIndex = 35;
@@ -1461,7 +1488,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA0.Location = new System.Drawing.Point(98, 93);
+            this.numericUpDown_lA0.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_lA0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA0.Name = "numericUpDown_lA0";
             this.numericUpDown_lA0.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_lA0.TabIndex = 19;
@@ -1470,20 +1498,21 @@
             // 
             this.numericUpDown_uA0.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_uA0.DecimalPlaces = 2;
-            this.numericUpDown_uA0.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_uA0.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_uA0.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_uA0.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_uA0.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_uA0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA0.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_uA0.Name = "numericUpDown_uA0";
-            this.numericUpDown_uA0.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_uA0.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_uA0.TabIndex = 1;
             // 
             // numericUpDown_lA1
@@ -1495,7 +1524,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA1.Location = new System.Drawing.Point(198, 93);
+            this.numericUpDown_lA1.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_lA1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1514,7 +1544,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA1.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_uA1.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_uA1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1533,7 +1564,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA2.Location = new System.Drawing.Point(298, 93);
+            this.numericUpDown_lA2.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_lA2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1552,7 +1584,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA2.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_uA2.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_uA2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1571,7 +1604,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA3.Location = new System.Drawing.Point(398, 93);
+            this.numericUpDown_lA3.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_lA3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1590,7 +1624,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA3.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_uA3.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_uA3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1609,7 +1644,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA4.Location = new System.Drawing.Point(498, 93);
+            this.numericUpDown_lA4.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_lA4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA4.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1628,7 +1664,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA4.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_uA4.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_uA4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA4.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1647,7 +1684,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA5.Location = new System.Drawing.Point(598, 93);
+            this.numericUpDown_lA5.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_lA5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA5.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1666,7 +1704,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA5.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_uA5.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_uA5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA5.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1685,7 +1724,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA6.Location = new System.Drawing.Point(698, 93);
+            this.numericUpDown_lA6.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_lA6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA6.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1704,7 +1744,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA6.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_uA6.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_uA6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA6.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1723,7 +1764,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA7.Location = new System.Drawing.Point(798, 93);
+            this.numericUpDown_lA7.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_lA7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA7.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1742,7 +1784,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA7.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_uA7.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_uA7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA7.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1761,7 +1804,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA8.Location = new System.Drawing.Point(898, 93);
+            this.numericUpDown_lA8.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_lA8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA8.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1780,7 +1824,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA8.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_uA8.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_uA8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA8.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1799,7 +1844,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_lA9.Location = new System.Drawing.Point(998, 93);
+            this.numericUpDown_lA9.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_lA9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_lA9.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1818,7 +1864,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_uA9.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_uA9.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_uA9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_uA9.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1833,7 +1880,7 @@
             this.label153.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label153.AutoSize = true;
             this.label153.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label153.Location = new System.Drawing.Point(3, 53);
+            this.label153.Location = new System.Drawing.Point(5, 57);
             this.label153.Name = "label153";
             this.label153.Size = new System.Drawing.Size(87, 14);
             this.label153.TabIndex = 34;
@@ -1843,7 +1890,7 @@
             // 
             this.label141.AutoSize = true;
             this.label141.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label141.Location = new System.Drawing.Point(32, 1585);
+            this.label141.Location = new System.Drawing.Point(23, 1579);
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(95, 19);
             this.label141.TabIndex = 34;
@@ -1851,6 +1898,7 @@
             // 
             // tableLayoutPanel10
             // 
+            this.tableLayoutPanel10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel10.ColumnCount = 11;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -1862,7 +1910,7 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel10.Controls.Add(this.label128, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.label129, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.label130, 5, 0);
@@ -1895,14 +1943,15 @@
             this.tableLayoutPanel10.Controls.Add(this.numericUpDown_l99, 10, 2);
             this.tableLayoutPanel10.Controls.Add(this.numericUpDown_u99, 10, 1);
             this.tableLayoutPanel10.Controls.Add(this.label139, 0, 1);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(30, 1607);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(17, 1606);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1097, 124);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel10.TabIndex = 33;
             // 
             // label128
@@ -1910,7 +1959,7 @@
             this.label128.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label128.Location = new System.Drawing.Point(98, 11);
+            this.label128.Location = new System.Drawing.Point(102, 13);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(82, 17);
             this.label128.TabIndex = 1;
@@ -1921,7 +1970,7 @@
             this.label129.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label129.Location = new System.Drawing.Point(198, 11);
+            this.label129.Location = new System.Drawing.Point(204, 13);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(82, 17);
             this.label129.TabIndex = 6;
@@ -1932,7 +1981,7 @@
             this.label130.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label130.Location = new System.Drawing.Point(498, 11);
+            this.label130.Location = new System.Drawing.Point(510, 13);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(82, 17);
             this.label130.TabIndex = 9;
@@ -1943,7 +1992,7 @@
             this.label131.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label131.AutoSize = true;
             this.label131.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label131.Location = new System.Drawing.Point(298, 11);
+            this.label131.Location = new System.Drawing.Point(306, 13);
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(82, 17);
             this.label131.TabIndex = 7;
@@ -1954,7 +2003,7 @@
             this.label132.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label132.AutoSize = true;
             this.label132.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label132.Location = new System.Drawing.Point(398, 11);
+            this.label132.Location = new System.Drawing.Point(408, 13);
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(82, 17);
             this.label132.TabIndex = 8;
@@ -1965,7 +2014,7 @@
             this.label133.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label133.AutoSize = true;
             this.label133.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label133.Location = new System.Drawing.Point(598, 11);
+            this.label133.Location = new System.Drawing.Point(612, 13);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(82, 17);
             this.label133.TabIndex = 29;
@@ -1976,7 +2025,7 @@
             this.label134.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label134.AutoSize = true;
             this.label134.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label134.Location = new System.Drawing.Point(698, 11);
+            this.label134.Location = new System.Drawing.Point(714, 13);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(82, 17);
             this.label134.TabIndex = 30;
@@ -1987,7 +2036,7 @@
             this.label135.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label135.AutoSize = true;
             this.label135.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label135.Location = new System.Drawing.Point(798, 11);
+            this.label135.Location = new System.Drawing.Point(816, 13);
             this.label135.Name = "label135";
             this.label135.Size = new System.Drawing.Size(82, 17);
             this.label135.TabIndex = 31;
@@ -1998,7 +2047,7 @@
             this.label136.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label136.AutoSize = true;
             this.label136.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label136.Location = new System.Drawing.Point(898, 11);
+            this.label136.Location = new System.Drawing.Point(918, 13);
             this.label136.Name = "label136";
             this.label136.Size = new System.Drawing.Size(82, 17);
             this.label136.TabIndex = 32;
@@ -2009,7 +2058,7 @@
             this.label137.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label137.AutoSize = true;
             this.label137.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label137.Location = new System.Drawing.Point(998, 11);
+            this.label137.Location = new System.Drawing.Point(1020, 13);
             this.label137.Name = "label137";
             this.label137.Size = new System.Drawing.Size(92, 17);
             this.label137.TabIndex = 33;
@@ -2020,7 +2069,7 @@
             this.label138.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label138.AutoSize = true;
             this.label138.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label138.Location = new System.Drawing.Point(3, 95);
+            this.label138.Location = new System.Drawing.Point(5, 99);
             this.label138.Name = "label138";
             this.label138.Size = new System.Drawing.Size(87, 14);
             this.label138.TabIndex = 35;
@@ -2035,7 +2084,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l90.Location = new System.Drawing.Point(98, 91);
+            this.numericUpDown_l90.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l90.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l90.Name = "numericUpDown_l90";
             this.numericUpDown_l90.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l90.TabIndex = 19;
@@ -2044,20 +2094,21 @@
             // 
             this.numericUpDown_u90.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u90.DecimalPlaces = 2;
-            this.numericUpDown_u90.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u90.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u90.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u90.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u90.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u90.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u90.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u90.Name = "numericUpDown_u90";
-            this.numericUpDown_u90.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u90.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u90.TabIndex = 1;
             // 
             // numericUpDown_l91
@@ -2069,7 +2120,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l91.Location = new System.Drawing.Point(198, 91);
+            this.numericUpDown_l91.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l91.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l91.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2088,7 +2140,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u91.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u91.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u91.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u91.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2107,7 +2160,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l92.Location = new System.Drawing.Point(298, 91);
+            this.numericUpDown_l92.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l92.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l92.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2126,7 +2180,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u92.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u92.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u92.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u92.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2145,7 +2200,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l93.Location = new System.Drawing.Point(398, 91);
+            this.numericUpDown_l93.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l93.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l93.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2164,7 +2220,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u93.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u93.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u93.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u93.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2183,7 +2240,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l94.Location = new System.Drawing.Point(498, 91);
+            this.numericUpDown_l94.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l94.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l94.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2202,7 +2260,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u94.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u94.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u94.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u94.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2221,7 +2280,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l95.Location = new System.Drawing.Point(598, 91);
+            this.numericUpDown_l95.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l95.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l95.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2240,7 +2300,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u95.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u95.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u95.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u95.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2259,7 +2320,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l96.Location = new System.Drawing.Point(698, 91);
+            this.numericUpDown_l96.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l96.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l96.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2278,7 +2340,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u96.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u96.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u96.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u96.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2297,7 +2360,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l97.Location = new System.Drawing.Point(798, 91);
+            this.numericUpDown_l97.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l97.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l97.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2316,7 +2380,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u97.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u97.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u97.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u97.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2335,7 +2400,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l98.Location = new System.Drawing.Point(898, 91);
+            this.numericUpDown_l98.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l98.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l98.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2354,7 +2420,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u98.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u98.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u98.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u98.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2373,7 +2440,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l99.Location = new System.Drawing.Point(998, 91);
+            this.numericUpDown_l99.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l99.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l99.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2392,7 +2460,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u99.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u99.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u99.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u99.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2407,7 +2476,7 @@
             this.label139.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label139.AutoSize = true;
             this.label139.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label139.Location = new System.Drawing.Point(3, 53);
+            this.label139.Location = new System.Drawing.Point(5, 57);
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(87, 14);
             this.label139.TabIndex = 34;
@@ -2417,7 +2486,7 @@
             // 
             this.label127.AutoSize = true;
             this.label127.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label127.Location = new System.Drawing.Point(36, 1407);
+            this.label127.Location = new System.Drawing.Point(23, 1401);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(84, 19);
             this.label127.TabIndex = 32;
@@ -2425,6 +2494,7 @@
             // 
             // tableLayoutPanel9
             // 
+            this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel9.ColumnCount = 11;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -2436,7 +2506,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel9.Controls.Add(this.label114, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.label115, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.label116, 5, 0);
@@ -2469,14 +2539,15 @@
             this.tableLayoutPanel9.Controls.Add(this.numericUpDown_l89, 10, 2);
             this.tableLayoutPanel9.Controls.Add(this.numericUpDown_u89, 10, 1);
             this.tableLayoutPanel9.Controls.Add(this.label125, 0, 1);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(30, 1429);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(17, 1429);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1097, 131);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel9.TabIndex = 31;
             // 
             // label114
@@ -2484,7 +2555,7 @@
             this.label114.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label114.AutoSize = true;
             this.label114.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label114.Location = new System.Drawing.Point(98, 11);
+            this.label114.Location = new System.Drawing.Point(102, 13);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(82, 17);
             this.label114.TabIndex = 1;
@@ -2495,7 +2566,7 @@
             this.label115.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label115.AutoSize = true;
             this.label115.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label115.Location = new System.Drawing.Point(198, 11);
+            this.label115.Location = new System.Drawing.Point(204, 13);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(82, 17);
             this.label115.TabIndex = 6;
@@ -2506,7 +2577,7 @@
             this.label116.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label116.AutoSize = true;
             this.label116.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label116.Location = new System.Drawing.Point(498, 11);
+            this.label116.Location = new System.Drawing.Point(510, 13);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(82, 17);
             this.label116.TabIndex = 9;
@@ -2517,7 +2588,7 @@
             this.label117.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label117.AutoSize = true;
             this.label117.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label117.Location = new System.Drawing.Point(298, 11);
+            this.label117.Location = new System.Drawing.Point(306, 13);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(82, 17);
             this.label117.TabIndex = 7;
@@ -2528,7 +2599,7 @@
             this.label118.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label118.AutoSize = true;
             this.label118.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label118.Location = new System.Drawing.Point(398, 11);
+            this.label118.Location = new System.Drawing.Point(408, 13);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(82, 17);
             this.label118.TabIndex = 8;
@@ -2539,7 +2610,7 @@
             this.label119.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label119.AutoSize = true;
             this.label119.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label119.Location = new System.Drawing.Point(598, 11);
+            this.label119.Location = new System.Drawing.Point(612, 13);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(82, 17);
             this.label119.TabIndex = 29;
@@ -2550,7 +2621,7 @@
             this.label120.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label120.Location = new System.Drawing.Point(698, 11);
+            this.label120.Location = new System.Drawing.Point(714, 13);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(82, 17);
             this.label120.TabIndex = 30;
@@ -2561,7 +2632,7 @@
             this.label121.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label121.AutoSize = true;
             this.label121.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label121.Location = new System.Drawing.Point(798, 11);
+            this.label121.Location = new System.Drawing.Point(816, 13);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(82, 17);
             this.label121.TabIndex = 31;
@@ -2572,7 +2643,7 @@
             this.label122.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label122.AutoSize = true;
             this.label122.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label122.Location = new System.Drawing.Point(898, 11);
+            this.label122.Location = new System.Drawing.Point(918, 13);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(82, 17);
             this.label122.TabIndex = 32;
@@ -2583,7 +2654,7 @@
             this.label123.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label123.Location = new System.Drawing.Point(998, 11);
+            this.label123.Location = new System.Drawing.Point(1020, 13);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(92, 17);
             this.label123.TabIndex = 33;
@@ -2594,7 +2665,7 @@
             this.label124.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label124.Location = new System.Drawing.Point(3, 98);
+            this.label124.Location = new System.Drawing.Point(5, 99);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(87, 14);
             this.label124.TabIndex = 35;
@@ -2609,7 +2680,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l80.Location = new System.Drawing.Point(98, 94);
+            this.numericUpDown_l80.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l80.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l80.Name = "numericUpDown_l80";
             this.numericUpDown_l80.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l80.TabIndex = 19;
@@ -2618,20 +2690,21 @@
             // 
             this.numericUpDown_u80.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u80.DecimalPlaces = 2;
-            this.numericUpDown_u80.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u80.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u80.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u80.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u80.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u80.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u80.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u80.Name = "numericUpDown_u80";
-            this.numericUpDown_u80.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u80.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u80.TabIndex = 1;
             // 
             // numericUpDown_l81
@@ -2643,7 +2716,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l81.Location = new System.Drawing.Point(198, 94);
+            this.numericUpDown_l81.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l81.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l81.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2662,7 +2736,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u81.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u81.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u81.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u81.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2681,7 +2756,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l82.Location = new System.Drawing.Point(298, 94);
+            this.numericUpDown_l82.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l82.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l82.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2700,7 +2776,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u82.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u82.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u82.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u82.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2719,7 +2796,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l83.Location = new System.Drawing.Point(398, 94);
+            this.numericUpDown_l83.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l83.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l83.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2738,7 +2816,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u83.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u83.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u83.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u83.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2757,7 +2836,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l84.Location = new System.Drawing.Point(498, 94);
+            this.numericUpDown_l84.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l84.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l84.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2776,7 +2856,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u84.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u84.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u84.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u84.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2795,7 +2876,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l85.Location = new System.Drawing.Point(598, 94);
+            this.numericUpDown_l85.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l85.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l85.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2814,7 +2896,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u85.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u85.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u85.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u85.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2833,7 +2916,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l86.Location = new System.Drawing.Point(698, 94);
+            this.numericUpDown_l86.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l86.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l86.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2852,7 +2936,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u86.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u86.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u86.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u86.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2871,7 +2956,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l87.Location = new System.Drawing.Point(798, 94);
+            this.numericUpDown_l87.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l87.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l87.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2890,7 +2976,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u87.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u87.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u87.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u87.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2909,7 +2996,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l88.Location = new System.Drawing.Point(898, 94);
+            this.numericUpDown_l88.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l88.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l88.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2928,7 +3016,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u88.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u88.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u88.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u88.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2947,7 +3036,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l89.Location = new System.Drawing.Point(998, 94);
+            this.numericUpDown_l89.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l89.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l89.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2966,7 +3056,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u89.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u89.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u89.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u89.Minimum = new decimal(new int[] {
             1,
             0,
@@ -2981,7 +3072,7 @@
             this.label125.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label125.Location = new System.Drawing.Point(3, 53);
+            this.label125.Location = new System.Drawing.Point(5, 57);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(87, 14);
             this.label125.TabIndex = 34;
@@ -2991,7 +3082,7 @@
             // 
             this.label113.AutoSize = true;
             this.label113.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label113.Location = new System.Drawing.Point(36, 1229);
+            this.label113.Location = new System.Drawing.Point(23, 1222);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(84, 19);
             this.label113.TabIndex = 30;
@@ -2999,6 +3090,7 @@
             // 
             // tableLayoutPanel8
             // 
+            this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel8.ColumnCount = 11;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -3010,7 +3102,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel8.Controls.Add(this.label100, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.label101, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.label102, 5, 0);
@@ -3043,14 +3135,15 @@
             this.tableLayoutPanel8.Controls.Add(this.numericUpDown_l79, 10, 2);
             this.tableLayoutPanel8.Controls.Add(this.numericUpDown_u79, 10, 1);
             this.tableLayoutPanel8.Controls.Add(this.label111, 0, 1);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(30, 1251);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(16, 1250);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1097, 130);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel8.TabIndex = 29;
             // 
             // label100
@@ -3058,7 +3151,7 @@
             this.label100.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label100.AutoSize = true;
             this.label100.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label100.Location = new System.Drawing.Point(98, 11);
+            this.label100.Location = new System.Drawing.Point(102, 13);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(82, 17);
             this.label100.TabIndex = 1;
@@ -3069,7 +3162,7 @@
             this.label101.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label101.Location = new System.Drawing.Point(198, 11);
+            this.label101.Location = new System.Drawing.Point(204, 13);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(82, 17);
             this.label101.TabIndex = 6;
@@ -3080,7 +3173,7 @@
             this.label102.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label102.Location = new System.Drawing.Point(498, 11);
+            this.label102.Location = new System.Drawing.Point(510, 13);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(82, 17);
             this.label102.TabIndex = 9;
@@ -3091,7 +3184,7 @@
             this.label103.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label103.Location = new System.Drawing.Point(298, 11);
+            this.label103.Location = new System.Drawing.Point(306, 13);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(82, 17);
             this.label103.TabIndex = 7;
@@ -3102,7 +3195,7 @@
             this.label104.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label104.Location = new System.Drawing.Point(398, 11);
+            this.label104.Location = new System.Drawing.Point(408, 13);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(82, 17);
             this.label104.TabIndex = 8;
@@ -3113,7 +3206,7 @@
             this.label105.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label105.Location = new System.Drawing.Point(598, 11);
+            this.label105.Location = new System.Drawing.Point(612, 13);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(82, 17);
             this.label105.TabIndex = 29;
@@ -3124,7 +3217,7 @@
             this.label106.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label106.Location = new System.Drawing.Point(698, 11);
+            this.label106.Location = new System.Drawing.Point(714, 13);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(82, 17);
             this.label106.TabIndex = 30;
@@ -3135,7 +3228,7 @@
             this.label107.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label107.Location = new System.Drawing.Point(798, 11);
+            this.label107.Location = new System.Drawing.Point(816, 13);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(82, 17);
             this.label107.TabIndex = 31;
@@ -3146,7 +3239,7 @@
             this.label108.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label108.Location = new System.Drawing.Point(898, 11);
+            this.label108.Location = new System.Drawing.Point(918, 13);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(82, 17);
             this.label108.TabIndex = 32;
@@ -3157,7 +3250,7 @@
             this.label109.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label109.Location = new System.Drawing.Point(998, 11);
+            this.label109.Location = new System.Drawing.Point(1020, 13);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(92, 17);
             this.label109.TabIndex = 33;
@@ -3168,7 +3261,7 @@
             this.label110.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label110.AutoSize = true;
             this.label110.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label110.Location = new System.Drawing.Point(3, 98);
+            this.label110.Location = new System.Drawing.Point(5, 99);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(87, 14);
             this.label110.TabIndex = 35;
@@ -3183,7 +3276,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l70.Location = new System.Drawing.Point(98, 94);
+            this.numericUpDown_l70.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l70.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l70.Name = "numericUpDown_l70";
             this.numericUpDown_l70.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l70.TabIndex = 19;
@@ -3192,20 +3286,21 @@
             // 
             this.numericUpDown_u70.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u70.DecimalPlaces = 2;
-            this.numericUpDown_u70.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u70.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u70.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u70.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u70.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u70.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u70.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u70.Name = "numericUpDown_u70";
-            this.numericUpDown_u70.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u70.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u70.TabIndex = 1;
             // 
             // numericUpDown_l71
@@ -3217,7 +3312,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l71.Location = new System.Drawing.Point(198, 94);
+            this.numericUpDown_l71.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l71.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l71.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3236,7 +3332,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u71.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u71.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u71.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u71.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3255,7 +3352,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l72.Location = new System.Drawing.Point(298, 94);
+            this.numericUpDown_l72.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l72.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l72.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3274,7 +3372,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u72.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u72.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u72.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u72.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3293,7 +3392,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l73.Location = new System.Drawing.Point(398, 94);
+            this.numericUpDown_l73.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l73.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l73.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3312,7 +3412,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u73.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u73.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u73.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u73.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3331,7 +3432,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l74.Location = new System.Drawing.Point(498, 94);
+            this.numericUpDown_l74.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l74.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l74.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3350,7 +3452,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u74.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u74.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u74.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u74.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3369,7 +3472,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l75.Location = new System.Drawing.Point(598, 94);
+            this.numericUpDown_l75.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l75.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l75.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3388,7 +3492,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u75.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u75.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u75.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u75.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3407,7 +3512,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l76.Location = new System.Drawing.Point(698, 94);
+            this.numericUpDown_l76.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l76.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l76.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3426,7 +3532,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u76.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u76.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u76.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u76.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3445,7 +3552,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l77.Location = new System.Drawing.Point(798, 94);
+            this.numericUpDown_l77.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l77.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l77.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3464,7 +3572,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u77.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u77.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u77.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u77.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3483,7 +3592,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l78.Location = new System.Drawing.Point(898, 94);
+            this.numericUpDown_l78.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l78.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l78.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3502,7 +3612,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u78.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u78.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u78.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u78.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3521,7 +3632,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l79.Location = new System.Drawing.Point(998, 94);
+            this.numericUpDown_l79.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l79.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l79.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3540,7 +3652,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u79.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u79.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u79.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u79.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3555,7 +3668,7 @@
             this.label111.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label111.Location = new System.Drawing.Point(3, 53);
+            this.label111.Location = new System.Drawing.Point(5, 57);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(87, 14);
             this.label111.TabIndex = 34;
@@ -3565,7 +3678,7 @@
             // 
             this.label99.AutoSize = true;
             this.label99.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label99.Location = new System.Drawing.Point(36, 1050);
+            this.label99.Location = new System.Drawing.Point(23, 1044);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(84, 19);
             this.label99.TabIndex = 28;
@@ -3573,6 +3686,7 @@
             // 
             // tableLayoutPanel7
             // 
+            this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel7.ColumnCount = 11;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -3584,7 +3698,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel7.Controls.Add(this.label86, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label87, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.label88, 5, 0);
@@ -3617,14 +3731,15 @@
             this.tableLayoutPanel7.Controls.Add(this.numericUpDown_l69, 10, 2);
             this.tableLayoutPanel7.Controls.Add(this.numericUpDown_u69, 10, 1);
             this.tableLayoutPanel7.Controls.Add(this.label97, 0, 1);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(30, 1072);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(17, 1071);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1097, 134);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel7.TabIndex = 27;
             // 
             // label86
@@ -3632,7 +3747,7 @@
             this.label86.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label86.Location = new System.Drawing.Point(98, 11);
+            this.label86.Location = new System.Drawing.Point(102, 13);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(82, 17);
             this.label86.TabIndex = 1;
@@ -3643,7 +3758,7 @@
             this.label87.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label87.Location = new System.Drawing.Point(198, 11);
+            this.label87.Location = new System.Drawing.Point(204, 13);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(82, 17);
             this.label87.TabIndex = 6;
@@ -3654,7 +3769,7 @@
             this.label88.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label88.Location = new System.Drawing.Point(498, 11);
+            this.label88.Location = new System.Drawing.Point(510, 13);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(82, 17);
             this.label88.TabIndex = 9;
@@ -3665,7 +3780,7 @@
             this.label89.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label89.Location = new System.Drawing.Point(298, 11);
+            this.label89.Location = new System.Drawing.Point(306, 13);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(82, 17);
             this.label89.TabIndex = 7;
@@ -3676,7 +3791,7 @@
             this.label90.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label90.Location = new System.Drawing.Point(398, 11);
+            this.label90.Location = new System.Drawing.Point(408, 13);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(82, 17);
             this.label90.TabIndex = 8;
@@ -3687,7 +3802,7 @@
             this.label91.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label91.Location = new System.Drawing.Point(598, 11);
+            this.label91.Location = new System.Drawing.Point(612, 13);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(82, 17);
             this.label91.TabIndex = 29;
@@ -3698,7 +3813,7 @@
             this.label92.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label92.Location = new System.Drawing.Point(698, 11);
+            this.label92.Location = new System.Drawing.Point(714, 13);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(82, 17);
             this.label92.TabIndex = 30;
@@ -3709,7 +3824,7 @@
             this.label93.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label93.Location = new System.Drawing.Point(798, 11);
+            this.label93.Location = new System.Drawing.Point(816, 13);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(82, 17);
             this.label93.TabIndex = 31;
@@ -3720,7 +3835,7 @@
             this.label94.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label94.Location = new System.Drawing.Point(898, 11);
+            this.label94.Location = new System.Drawing.Point(918, 13);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(82, 17);
             this.label94.TabIndex = 32;
@@ -3731,7 +3846,7 @@
             this.label95.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label95.Location = new System.Drawing.Point(998, 11);
+            this.label95.Location = new System.Drawing.Point(1020, 13);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(92, 17);
             this.label95.TabIndex = 33;
@@ -3742,7 +3857,7 @@
             this.label96.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label96.Location = new System.Drawing.Point(3, 100);
+            this.label96.Location = new System.Drawing.Point(5, 99);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(87, 14);
             this.label96.TabIndex = 35;
@@ -3757,7 +3872,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l60.Location = new System.Drawing.Point(98, 96);
+            this.numericUpDown_l60.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l60.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l60.Name = "numericUpDown_l60";
             this.numericUpDown_l60.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l60.TabIndex = 19;
@@ -3766,20 +3882,21 @@
             // 
             this.numericUpDown_u60.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u60.DecimalPlaces = 2;
-            this.numericUpDown_u60.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u60.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u60.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u60.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u60.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u60.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u60.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u60.Name = "numericUpDown_u60";
-            this.numericUpDown_u60.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u60.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u60.TabIndex = 1;
             // 
             // numericUpDown_l61
@@ -3791,7 +3908,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l61.Location = new System.Drawing.Point(198, 96);
+            this.numericUpDown_l61.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l61.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l61.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3810,7 +3928,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u61.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u61.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u61.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u61.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3829,7 +3948,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l62.Location = new System.Drawing.Point(298, 96);
+            this.numericUpDown_l62.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l62.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l62.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3848,7 +3968,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u62.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u62.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u62.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u62.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3867,7 +3988,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l63.Location = new System.Drawing.Point(398, 96);
+            this.numericUpDown_l63.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l63.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l63.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3886,7 +4008,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u63.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u63.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u63.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u63.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3905,7 +4028,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l64.Location = new System.Drawing.Point(498, 96);
+            this.numericUpDown_l64.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l64.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l64.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3924,7 +4048,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u64.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u64.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u64.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u64.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3943,7 +4068,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l65.Location = new System.Drawing.Point(598, 96);
+            this.numericUpDown_l65.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l65.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l65.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3962,7 +4088,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u65.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u65.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u65.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u65.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3981,7 +4108,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l66.Location = new System.Drawing.Point(698, 96);
+            this.numericUpDown_l66.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l66.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l66.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4000,7 +4128,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u66.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u66.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u66.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u66.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4019,7 +4148,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l67.Location = new System.Drawing.Point(798, 96);
+            this.numericUpDown_l67.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l67.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l67.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4038,7 +4168,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u67.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u67.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u67.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u67.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4057,7 +4188,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l68.Location = new System.Drawing.Point(898, 96);
+            this.numericUpDown_l68.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l68.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l68.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4076,7 +4208,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u68.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u68.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u68.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u68.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4095,7 +4228,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l69.Location = new System.Drawing.Point(998, 96);
+            this.numericUpDown_l69.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l69.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l69.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4114,7 +4248,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u69.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u69.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u69.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u69.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4129,7 +4264,7 @@
             this.label97.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label97.AutoSize = true;
             this.label97.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label97.Location = new System.Drawing.Point(3, 53);
+            this.label97.Location = new System.Drawing.Point(5, 57);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(87, 14);
             this.label97.TabIndex = 34;
@@ -4139,7 +4274,7 @@
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label85.Location = new System.Drawing.Point(36, 873);
+            this.label85.Location = new System.Drawing.Point(23, 866);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(84, 19);
             this.label85.TabIndex = 26;
@@ -4147,6 +4282,7 @@
             // 
             // tableLayoutPanel6
             // 
+            this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel6.ColumnCount = 11;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -4158,7 +4294,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel6.Controls.Add(this.label72, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label73, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.label74, 5, 0);
@@ -4191,14 +4327,15 @@
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown_l59, 10, 2);
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown_u59, 10, 1);
             this.tableLayoutPanel6.Controls.Add(this.label83, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(30, 895);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(17, 894);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1097, 133);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel6.TabIndex = 25;
             // 
             // label72
@@ -4206,7 +4343,7 @@
             this.label72.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label72.Location = new System.Drawing.Point(98, 11);
+            this.label72.Location = new System.Drawing.Point(102, 13);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(82, 17);
             this.label72.TabIndex = 1;
@@ -4217,7 +4354,7 @@
             this.label73.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label73.Location = new System.Drawing.Point(198, 11);
+            this.label73.Location = new System.Drawing.Point(204, 13);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(82, 17);
             this.label73.TabIndex = 6;
@@ -4228,7 +4365,7 @@
             this.label74.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label74.Location = new System.Drawing.Point(498, 11);
+            this.label74.Location = new System.Drawing.Point(510, 13);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(82, 17);
             this.label74.TabIndex = 9;
@@ -4239,7 +4376,7 @@
             this.label75.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label75.Location = new System.Drawing.Point(298, 11);
+            this.label75.Location = new System.Drawing.Point(306, 13);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(82, 17);
             this.label75.TabIndex = 7;
@@ -4250,7 +4387,7 @@
             this.label76.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label76.Location = new System.Drawing.Point(398, 11);
+            this.label76.Location = new System.Drawing.Point(408, 13);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(82, 17);
             this.label76.TabIndex = 8;
@@ -4261,7 +4398,7 @@
             this.label77.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label77.Location = new System.Drawing.Point(598, 11);
+            this.label77.Location = new System.Drawing.Point(612, 13);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(82, 17);
             this.label77.TabIndex = 29;
@@ -4272,7 +4409,7 @@
             this.label78.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label78.Location = new System.Drawing.Point(698, 11);
+            this.label78.Location = new System.Drawing.Point(714, 13);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(82, 17);
             this.label78.TabIndex = 30;
@@ -4283,7 +4420,7 @@
             this.label79.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label79.AutoSize = true;
             this.label79.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label79.Location = new System.Drawing.Point(798, 11);
+            this.label79.Location = new System.Drawing.Point(816, 13);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(82, 17);
             this.label79.TabIndex = 31;
@@ -4294,7 +4431,7 @@
             this.label80.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label80.AutoSize = true;
             this.label80.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label80.Location = new System.Drawing.Point(898, 11);
+            this.label80.Location = new System.Drawing.Point(918, 13);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(82, 17);
             this.label80.TabIndex = 32;
@@ -4305,7 +4442,7 @@
             this.label81.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label81.AutoSize = true;
             this.label81.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label81.Location = new System.Drawing.Point(998, 11);
+            this.label81.Location = new System.Drawing.Point(1020, 13);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(92, 17);
             this.label81.TabIndex = 33;
@@ -4316,7 +4453,7 @@
             this.label82.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label82.Location = new System.Drawing.Point(3, 99);
+            this.label82.Location = new System.Drawing.Point(5, 99);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(87, 14);
             this.label82.TabIndex = 35;
@@ -4331,7 +4468,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l50.Location = new System.Drawing.Point(98, 95);
+            this.numericUpDown_l50.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l50.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l50.Name = "numericUpDown_l50";
             this.numericUpDown_l50.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l50.TabIndex = 19;
@@ -4340,20 +4478,21 @@
             // 
             this.numericUpDown_u50.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u50.DecimalPlaces = 2;
-            this.numericUpDown_u50.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u50.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u50.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u50.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u50.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u50.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u50.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u50.Name = "numericUpDown_u50";
-            this.numericUpDown_u50.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u50.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u50.TabIndex = 1;
             // 
             // numericUpDown_l51
@@ -4365,7 +4504,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l51.Location = new System.Drawing.Point(198, 95);
+            this.numericUpDown_l51.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l51.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4384,7 +4524,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u51.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u51.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u51.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4403,7 +4544,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l52.Location = new System.Drawing.Point(298, 95);
+            this.numericUpDown_l52.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l52.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4422,7 +4564,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u52.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u52.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u52.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4441,7 +4584,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l53.Location = new System.Drawing.Point(398, 95);
+            this.numericUpDown_l53.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l53.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4460,7 +4604,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u53.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u53.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u53.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4479,7 +4624,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l54.Location = new System.Drawing.Point(498, 95);
+            this.numericUpDown_l54.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l54.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4498,7 +4644,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u54.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u54.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u54.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4517,7 +4664,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l55.Location = new System.Drawing.Point(598, 95);
+            this.numericUpDown_l55.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l55.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l55.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4536,7 +4684,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u55.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u55.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u55.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u55.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4555,7 +4704,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l56.Location = new System.Drawing.Point(698, 95);
+            this.numericUpDown_l56.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l56.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l56.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4574,7 +4724,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u56.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u56.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u56.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u56.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4593,7 +4744,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l57.Location = new System.Drawing.Point(798, 95);
+            this.numericUpDown_l57.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l57.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l57.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4612,7 +4764,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u57.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u57.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u57.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u57.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4631,7 +4784,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l58.Location = new System.Drawing.Point(898, 95);
+            this.numericUpDown_l58.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l58.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l58.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4650,7 +4804,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u58.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u58.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u58.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u58.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4669,7 +4824,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l59.Location = new System.Drawing.Point(998, 95);
+            this.numericUpDown_l59.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l59.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l59.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4688,7 +4844,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u59.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u59.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u59.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u59.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4703,7 +4860,7 @@
             this.label83.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label83.AutoSize = true;
             this.label83.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label83.Location = new System.Drawing.Point(3, 53);
+            this.label83.Location = new System.Drawing.Point(5, 57);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(87, 14);
             this.label83.TabIndex = 34;
@@ -4713,7 +4870,7 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label71.Location = new System.Drawing.Point(36, 704);
+            this.label71.Location = new System.Drawing.Point(23, 698);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(84, 19);
             this.label71.TabIndex = 24;
@@ -4721,6 +4878,7 @@
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel5.ColumnCount = 11;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -4732,7 +4890,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel5.Controls.Add(this.label58, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label59, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.label60, 5, 0);
@@ -4765,14 +4923,15 @@
             this.tableLayoutPanel5.Controls.Add(this.numericUpDown_l49, 10, 2);
             this.tableLayoutPanel5.Controls.Add(this.numericUpDown_u49, 10, 1);
             this.tableLayoutPanel5.Controls.Add(this.label69, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(30, 726);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(17, 725);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1097, 124);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel5.TabIndex = 23;
             // 
             // label58
@@ -4780,7 +4939,7 @@
             this.label58.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label58.Location = new System.Drawing.Point(98, 11);
+            this.label58.Location = new System.Drawing.Point(102, 13);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(82, 17);
             this.label58.TabIndex = 1;
@@ -4791,7 +4950,7 @@
             this.label59.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label59.Location = new System.Drawing.Point(198, 11);
+            this.label59.Location = new System.Drawing.Point(204, 13);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(82, 17);
             this.label59.TabIndex = 6;
@@ -4802,7 +4961,7 @@
             this.label60.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label60.Location = new System.Drawing.Point(498, 11);
+            this.label60.Location = new System.Drawing.Point(510, 13);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(82, 17);
             this.label60.TabIndex = 9;
@@ -4813,7 +4972,7 @@
             this.label61.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label61.Location = new System.Drawing.Point(298, 11);
+            this.label61.Location = new System.Drawing.Point(306, 13);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(82, 17);
             this.label61.TabIndex = 7;
@@ -4824,7 +4983,7 @@
             this.label62.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label62.Location = new System.Drawing.Point(398, 11);
+            this.label62.Location = new System.Drawing.Point(408, 13);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(82, 17);
             this.label62.TabIndex = 8;
@@ -4835,7 +4994,7 @@
             this.label63.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label63.Location = new System.Drawing.Point(598, 11);
+            this.label63.Location = new System.Drawing.Point(612, 13);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(82, 17);
             this.label63.TabIndex = 29;
@@ -4846,7 +5005,7 @@
             this.label64.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label64.Location = new System.Drawing.Point(698, 11);
+            this.label64.Location = new System.Drawing.Point(714, 13);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(82, 17);
             this.label64.TabIndex = 30;
@@ -4857,7 +5016,7 @@
             this.label65.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label65.Location = new System.Drawing.Point(798, 11);
+            this.label65.Location = new System.Drawing.Point(816, 13);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(82, 17);
             this.label65.TabIndex = 31;
@@ -4868,7 +5027,7 @@
             this.label66.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label66.Location = new System.Drawing.Point(898, 11);
+            this.label66.Location = new System.Drawing.Point(918, 13);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(82, 17);
             this.label66.TabIndex = 32;
@@ -4879,7 +5038,7 @@
             this.label67.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label67.Location = new System.Drawing.Point(998, 11);
+            this.label67.Location = new System.Drawing.Point(1020, 13);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(92, 17);
             this.label67.TabIndex = 33;
@@ -4890,7 +5049,7 @@
             this.label68.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label68.Location = new System.Drawing.Point(3, 95);
+            this.label68.Location = new System.Drawing.Point(5, 99);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(87, 14);
             this.label68.TabIndex = 35;
@@ -4905,7 +5064,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l40.Location = new System.Drawing.Point(98, 91);
+            this.numericUpDown_l40.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l40.Name = "numericUpDown_l40";
             this.numericUpDown_l40.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l40.TabIndex = 19;
@@ -4914,20 +5074,21 @@
             // 
             this.numericUpDown_u40.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u40.DecimalPlaces = 2;
-            this.numericUpDown_u40.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u40.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u40.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u40.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u40.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u40.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u40.Name = "numericUpDown_u40";
-            this.numericUpDown_u40.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u40.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u40.TabIndex = 1;
             // 
             // numericUpDown_l41
@@ -4939,7 +5100,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l41.Location = new System.Drawing.Point(198, 91);
+            this.numericUpDown_l41.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l41.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4958,7 +5120,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u41.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u41.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u41.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4977,7 +5140,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l42.Location = new System.Drawing.Point(298, 91);
+            this.numericUpDown_l42.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l42.Minimum = new decimal(new int[] {
             1,
             0,
@@ -4996,7 +5160,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u42.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u42.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u42.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5015,7 +5180,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l43.Location = new System.Drawing.Point(398, 91);
+            this.numericUpDown_l43.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l43.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5034,7 +5200,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u43.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u43.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u43.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5053,7 +5220,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l44.Location = new System.Drawing.Point(498, 91);
+            this.numericUpDown_l44.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l44.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5072,7 +5240,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u44.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u44.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u44.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5091,7 +5260,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l45.Location = new System.Drawing.Point(598, 91);
+            this.numericUpDown_l45.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l45.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5110,7 +5280,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u45.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u45.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u45.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5129,7 +5300,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l46.Location = new System.Drawing.Point(698, 91);
+            this.numericUpDown_l46.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l46.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5148,7 +5320,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u46.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u46.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u46.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5167,7 +5340,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l47.Location = new System.Drawing.Point(798, 91);
+            this.numericUpDown_l47.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l47.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5186,7 +5360,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u47.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u47.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u47.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5205,7 +5380,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l48.Location = new System.Drawing.Point(898, 91);
+            this.numericUpDown_l48.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l48.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5224,7 +5400,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u48.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u48.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u48.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5243,7 +5420,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l49.Location = new System.Drawing.Point(998, 91);
+            this.numericUpDown_l49.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l49.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l49.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5262,7 +5440,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u49.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u49.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u49.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u49.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5277,7 +5456,7 @@
             this.label69.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label69.Location = new System.Drawing.Point(3, 53);
+            this.label69.Location = new System.Drawing.Point(5, 57);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(87, 14);
             this.label69.TabIndex = 34;
@@ -5287,7 +5466,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label57.Location = new System.Drawing.Point(32, 533);
+            this.label57.Location = new System.Drawing.Point(20, 526);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(84, 19);
             this.label57.TabIndex = 22;
@@ -5295,6 +5474,7 @@
             // 
             // tableLayoutPanel4
             // 
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel4.ColumnCount = 11;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -5306,7 +5486,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel4.Controls.Add(this.label44, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label45, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.label46, 5, 0);
@@ -5339,14 +5519,15 @@
             this.tableLayoutPanel4.Controls.Add(this.numericUpDown_l39, 10, 2);
             this.tableLayoutPanel4.Controls.Add(this.numericUpDown_u39, 10, 1);
             this.tableLayoutPanel4.Controls.Add(this.label55, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(30, 555);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(17, 555);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1097, 126);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel4.TabIndex = 21;
             // 
             // label44
@@ -5354,7 +5535,7 @@
             this.label44.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label44.Location = new System.Drawing.Point(98, 11);
+            this.label44.Location = new System.Drawing.Point(102, 13);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(82, 17);
             this.label44.TabIndex = 1;
@@ -5365,7 +5546,7 @@
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label45.Location = new System.Drawing.Point(198, 11);
+            this.label45.Location = new System.Drawing.Point(204, 13);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(82, 17);
             this.label45.TabIndex = 6;
@@ -5376,7 +5557,7 @@
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label46.Location = new System.Drawing.Point(498, 11);
+            this.label46.Location = new System.Drawing.Point(510, 13);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(82, 17);
             this.label46.TabIndex = 9;
@@ -5387,7 +5568,7 @@
             this.label47.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label47.Location = new System.Drawing.Point(298, 11);
+            this.label47.Location = new System.Drawing.Point(306, 13);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(82, 17);
             this.label47.TabIndex = 7;
@@ -5398,7 +5579,7 @@
             this.label48.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label48.Location = new System.Drawing.Point(398, 11);
+            this.label48.Location = new System.Drawing.Point(408, 13);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(82, 17);
             this.label48.TabIndex = 8;
@@ -5409,7 +5590,7 @@
             this.label49.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label49.Location = new System.Drawing.Point(598, 11);
+            this.label49.Location = new System.Drawing.Point(612, 13);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(82, 17);
             this.label49.TabIndex = 29;
@@ -5420,7 +5601,7 @@
             this.label50.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label50.Location = new System.Drawing.Point(698, 11);
+            this.label50.Location = new System.Drawing.Point(714, 13);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(82, 17);
             this.label50.TabIndex = 30;
@@ -5431,7 +5612,7 @@
             this.label51.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label51.Location = new System.Drawing.Point(798, 11);
+            this.label51.Location = new System.Drawing.Point(816, 13);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(82, 17);
             this.label51.TabIndex = 31;
@@ -5442,7 +5623,7 @@
             this.label52.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label52.Location = new System.Drawing.Point(898, 11);
+            this.label52.Location = new System.Drawing.Point(918, 13);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(82, 17);
             this.label52.TabIndex = 32;
@@ -5453,7 +5634,7 @@
             this.label53.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label53.Location = new System.Drawing.Point(998, 11);
+            this.label53.Location = new System.Drawing.Point(1020, 13);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(92, 17);
             this.label53.TabIndex = 33;
@@ -5464,7 +5645,7 @@
             this.label54.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label54.Location = new System.Drawing.Point(3, 96);
+            this.label54.Location = new System.Drawing.Point(5, 99);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(87, 14);
             this.label54.TabIndex = 35;
@@ -5479,7 +5660,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l30.Location = new System.Drawing.Point(98, 92);
+            this.numericUpDown_l30.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l30.Name = "numericUpDown_l30";
             this.numericUpDown_l30.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l30.TabIndex = 19;
@@ -5488,20 +5670,21 @@
             // 
             this.numericUpDown_u30.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u30.DecimalPlaces = 2;
-            this.numericUpDown_u30.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u30.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u30.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u30.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u30.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u30.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u30.Name = "numericUpDown_u30";
-            this.numericUpDown_u30.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u30.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u30.TabIndex = 1;
             // 
             // numericUpDown_l31
@@ -5513,7 +5696,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l31.Location = new System.Drawing.Point(198, 92);
+            this.numericUpDown_l31.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l31.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5532,7 +5716,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u31.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u31.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u31.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5551,7 +5736,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l32.Location = new System.Drawing.Point(298, 92);
+            this.numericUpDown_l32.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l32.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5570,7 +5756,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u32.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u32.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u32.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5589,7 +5776,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l33.Location = new System.Drawing.Point(398, 92);
+            this.numericUpDown_l33.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l33.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5608,7 +5796,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u33.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u33.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u33.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5627,7 +5816,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l34.Location = new System.Drawing.Point(498, 92);
+            this.numericUpDown_l34.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l34.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5646,7 +5836,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u34.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u34.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u34.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5665,7 +5856,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l35.Location = new System.Drawing.Point(598, 92);
+            this.numericUpDown_l35.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l35.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5684,7 +5876,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u35.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u35.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u35.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5703,7 +5896,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l36.Location = new System.Drawing.Point(698, 92);
+            this.numericUpDown_l36.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l36.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5722,7 +5916,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u36.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u36.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u36.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5741,7 +5936,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l37.Location = new System.Drawing.Point(798, 92);
+            this.numericUpDown_l37.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l37.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5760,7 +5956,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u37.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u37.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u37.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5779,7 +5976,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l38.Location = new System.Drawing.Point(898, 92);
+            this.numericUpDown_l38.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l38.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5798,7 +5996,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u38.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u38.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u38.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5817,7 +6016,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l39.Location = new System.Drawing.Point(998, 92);
+            this.numericUpDown_l39.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l39.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5836,7 +6036,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u39.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u39.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u39.Minimum = new decimal(new int[] {
             1,
             0,
@@ -5851,7 +6052,7 @@
             this.label55.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label55.Location = new System.Drawing.Point(3, 53);
+            this.label55.Location = new System.Drawing.Point(5, 57);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(87, 14);
             this.label55.TabIndex = 34;
@@ -5861,7 +6062,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label43.Location = new System.Drawing.Point(32, 363);
+            this.label43.Location = new System.Drawing.Point(19, 356);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(84, 19);
             this.label43.TabIndex = 20;
@@ -5869,6 +6070,7 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel3.ColumnCount = 11;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -5880,7 +6082,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel3.Controls.Add(this.label30, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label31, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label32, 5, 0);
@@ -5913,14 +6115,15 @@
             this.tableLayoutPanel3.Controls.Add(this.numericUpDown_l29, 10, 2);
             this.tableLayoutPanel3.Controls.Add(this.numericUpDown_u29, 10, 1);
             this.tableLayoutPanel3.Controls.Add(this.label41, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(30, 385);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, 385);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1097, 127);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
             // label30
@@ -5928,7 +6131,7 @@
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label30.Location = new System.Drawing.Point(98, 11);
+            this.label30.Location = new System.Drawing.Point(102, 13);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(82, 17);
             this.label30.TabIndex = 1;
@@ -5939,7 +6142,7 @@
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label31.Location = new System.Drawing.Point(198, 11);
+            this.label31.Location = new System.Drawing.Point(204, 13);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(82, 17);
             this.label31.TabIndex = 6;
@@ -5950,7 +6153,7 @@
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label32.Location = new System.Drawing.Point(498, 11);
+            this.label32.Location = new System.Drawing.Point(510, 13);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(82, 17);
             this.label32.TabIndex = 9;
@@ -5961,7 +6164,7 @@
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label33.Location = new System.Drawing.Point(298, 11);
+            this.label33.Location = new System.Drawing.Point(306, 13);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(82, 17);
             this.label33.TabIndex = 7;
@@ -5972,7 +6175,7 @@
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label34.Location = new System.Drawing.Point(398, 11);
+            this.label34.Location = new System.Drawing.Point(408, 13);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(82, 17);
             this.label34.TabIndex = 8;
@@ -5983,7 +6186,7 @@
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label35.Location = new System.Drawing.Point(598, 11);
+            this.label35.Location = new System.Drawing.Point(612, 13);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(82, 17);
             this.label35.TabIndex = 29;
@@ -5994,7 +6197,7 @@
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label36.Location = new System.Drawing.Point(698, 11);
+            this.label36.Location = new System.Drawing.Point(714, 13);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(82, 17);
             this.label36.TabIndex = 30;
@@ -6005,7 +6208,7 @@
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label37.Location = new System.Drawing.Point(798, 11);
+            this.label37.Location = new System.Drawing.Point(816, 13);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(82, 17);
             this.label37.TabIndex = 31;
@@ -6016,7 +6219,7 @@
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label38.Location = new System.Drawing.Point(898, 11);
+            this.label38.Location = new System.Drawing.Point(918, 13);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(82, 17);
             this.label38.TabIndex = 32;
@@ -6027,7 +6230,7 @@
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label39.Location = new System.Drawing.Point(998, 11);
+            this.label39.Location = new System.Drawing.Point(1020, 13);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(92, 17);
             this.label39.TabIndex = 33;
@@ -6038,7 +6241,7 @@
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label40.Location = new System.Drawing.Point(3, 96);
+            this.label40.Location = new System.Drawing.Point(5, 99);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(87, 14);
             this.label40.TabIndex = 35;
@@ -6053,7 +6256,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l20.Location = new System.Drawing.Point(98, 92);
+            this.numericUpDown_l20.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l20.Name = "numericUpDown_l20";
             this.numericUpDown_l20.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l20.TabIndex = 19;
@@ -6062,20 +6266,21 @@
             // 
             this.numericUpDown_u20.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u20.DecimalPlaces = 2;
-            this.numericUpDown_u20.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u20.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u20.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u20.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u20.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u20.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u20.Name = "numericUpDown_u20";
-            this.numericUpDown_u20.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u20.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u20.TabIndex = 1;
             // 
             // numericUpDown_l21
@@ -6087,7 +6292,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l21.Location = new System.Drawing.Point(198, 92);
+            this.numericUpDown_l21.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l21.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6106,7 +6312,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u21.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u21.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u21.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6125,7 +6332,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l22.Location = new System.Drawing.Point(298, 92);
+            this.numericUpDown_l22.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l22.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6144,7 +6352,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u22.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u22.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u22.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6163,7 +6372,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l23.Location = new System.Drawing.Point(398, 92);
+            this.numericUpDown_l23.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l23.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6182,7 +6392,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u23.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u23.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u23.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6201,7 +6412,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l24.Location = new System.Drawing.Point(498, 92);
+            this.numericUpDown_l24.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l24.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6220,7 +6432,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u24.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u24.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u24.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6239,7 +6452,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l25.Location = new System.Drawing.Point(598, 92);
+            this.numericUpDown_l25.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l25.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6258,7 +6472,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u25.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u25.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u25.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6277,7 +6492,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l26.Location = new System.Drawing.Point(698, 92);
+            this.numericUpDown_l26.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l26.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6296,7 +6512,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u26.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u26.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u26.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6315,7 +6532,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l27.Location = new System.Drawing.Point(798, 92);
+            this.numericUpDown_l27.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l27.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6334,7 +6552,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u27.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u27.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u27.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6353,7 +6572,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l28.Location = new System.Drawing.Point(898, 92);
+            this.numericUpDown_l28.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l28.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6372,7 +6592,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u28.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u28.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u28.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6391,7 +6612,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l29.Location = new System.Drawing.Point(998, 92);
+            this.numericUpDown_l29.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l29.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6410,7 +6632,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u29.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u29.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u29.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6425,7 +6648,7 @@
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label41.Location = new System.Drawing.Point(3, 53);
+            this.label41.Location = new System.Drawing.Point(5, 57);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(87, 14);
             this.label41.TabIndex = 34;
@@ -6435,7 +6658,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label29.Location = new System.Drawing.Point(32, 194);
+            this.label29.Location = new System.Drawing.Point(19, 188);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(84, 19);
             this.label29.TabIndex = 18;
@@ -6445,7 +6668,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label28.Location = new System.Drawing.Point(32, 23);
+            this.label28.Location = new System.Drawing.Point(20, 16);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(84, 19);
             this.label28.TabIndex = 16;
@@ -6453,6 +6676,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel2.ColumnCount = 11;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -6464,7 +6688,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel2.Controls.Add(this.label15, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label16, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label17, 5, 0);
@@ -6497,14 +6721,15 @@
             this.tableLayoutPanel2.Controls.Add(this.numericUpDown_l19, 10, 2);
             this.tableLayoutPanel2.Controls.Add(this.numericUpDown_u19, 10, 1);
             this.tableLayoutPanel2.Controls.Add(this.label26, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(30, 216);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(17, 215);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1097, 125);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1133, 129);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // label15
@@ -6512,7 +6737,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.Location = new System.Drawing.Point(98, 11);
+            this.label15.Location = new System.Drawing.Point(102, 13);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 17);
             this.label15.TabIndex = 1;
@@ -6523,7 +6748,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label16.Location = new System.Drawing.Point(198, 11);
+            this.label16.Location = new System.Drawing.Point(204, 13);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(82, 17);
             this.label16.TabIndex = 6;
@@ -6534,7 +6759,7 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label17.Location = new System.Drawing.Point(498, 11);
+            this.label17.Location = new System.Drawing.Point(510, 13);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 17);
             this.label17.TabIndex = 9;
@@ -6545,7 +6770,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label18.Location = new System.Drawing.Point(298, 11);
+            this.label18.Location = new System.Drawing.Point(306, 13);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(82, 17);
             this.label18.TabIndex = 7;
@@ -6556,7 +6781,7 @@
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label19.Location = new System.Drawing.Point(398, 11);
+            this.label19.Location = new System.Drawing.Point(408, 13);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(82, 17);
             this.label19.TabIndex = 8;
@@ -6567,7 +6792,7 @@
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label20.Location = new System.Drawing.Point(598, 11);
+            this.label20.Location = new System.Drawing.Point(612, 13);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(82, 17);
             this.label20.TabIndex = 29;
@@ -6578,7 +6803,7 @@
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label21.Location = new System.Drawing.Point(698, 11);
+            this.label21.Location = new System.Drawing.Point(714, 13);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(82, 17);
             this.label21.TabIndex = 30;
@@ -6589,7 +6814,7 @@
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(798, 11);
+            this.label22.Location = new System.Drawing.Point(816, 13);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 17);
             this.label22.TabIndex = 31;
@@ -6600,7 +6825,7 @@
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label23.Location = new System.Drawing.Point(898, 11);
+            this.label23.Location = new System.Drawing.Point(918, 13);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(82, 17);
             this.label23.TabIndex = 32;
@@ -6611,7 +6836,7 @@
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label24.Location = new System.Drawing.Point(998, 11);
+            this.label24.Location = new System.Drawing.Point(1020, 13);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(92, 17);
             this.label24.TabIndex = 33;
@@ -6622,7 +6847,7 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label25.Location = new System.Drawing.Point(3, 95);
+            this.label25.Location = new System.Drawing.Point(5, 99);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(87, 14);
             this.label25.TabIndex = 35;
@@ -6637,7 +6862,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l10.Location = new System.Drawing.Point(98, 91);
+            this.numericUpDown_l10.Location = new System.Drawing.Point(102, 95);
+            this.numericUpDown_l10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l10.Name = "numericUpDown_l10";
             this.numericUpDown_l10.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown_l10.TabIndex = 19;
@@ -6646,20 +6872,21 @@
             // 
             this.numericUpDown_u10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_u10.DecimalPlaces = 2;
-            this.numericUpDown_u10.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDown_u10.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.numericUpDown_u10.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown_u10.Location = new System.Drawing.Point(98, 48);
+            this.numericUpDown_u10.Location = new System.Drawing.Point(102, 53);
+            this.numericUpDown_u10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u10.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.numericUpDown_u10.Name = "numericUpDown_u10";
-            this.numericUpDown_u10.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown_u10.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_u10.TabIndex = 1;
             // 
             // numericUpDown_l11
@@ -6671,7 +6898,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l11.Location = new System.Drawing.Point(198, 91);
+            this.numericUpDown_l11.Location = new System.Drawing.Point(204, 95);
+            this.numericUpDown_l11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l11.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6690,7 +6918,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u11.Location = new System.Drawing.Point(198, 49);
+            this.numericUpDown_u11.Location = new System.Drawing.Point(204, 53);
+            this.numericUpDown_u11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u11.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6709,7 +6938,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l12.Location = new System.Drawing.Point(298, 91);
+            this.numericUpDown_l12.Location = new System.Drawing.Point(306, 95);
+            this.numericUpDown_l12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l12.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6728,7 +6958,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u12.Location = new System.Drawing.Point(298, 49);
+            this.numericUpDown_u12.Location = new System.Drawing.Point(306, 53);
+            this.numericUpDown_u12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u12.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6747,7 +6978,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l13.Location = new System.Drawing.Point(398, 91);
+            this.numericUpDown_l13.Location = new System.Drawing.Point(408, 95);
+            this.numericUpDown_l13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l13.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6766,7 +6998,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u13.Location = new System.Drawing.Point(398, 49);
+            this.numericUpDown_u13.Location = new System.Drawing.Point(408, 53);
+            this.numericUpDown_u13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u13.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6785,7 +7018,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l14.Location = new System.Drawing.Point(498, 91);
+            this.numericUpDown_l14.Location = new System.Drawing.Point(510, 95);
+            this.numericUpDown_l14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l14.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6804,7 +7038,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u14.Location = new System.Drawing.Point(498, 49);
+            this.numericUpDown_u14.Location = new System.Drawing.Point(510, 53);
+            this.numericUpDown_u14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u14.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6823,7 +7058,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l15.Location = new System.Drawing.Point(598, 91);
+            this.numericUpDown_l15.Location = new System.Drawing.Point(612, 95);
+            this.numericUpDown_l15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l15.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6842,7 +7078,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u15.Location = new System.Drawing.Point(598, 49);
+            this.numericUpDown_u15.Location = new System.Drawing.Point(612, 53);
+            this.numericUpDown_u15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u15.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6861,7 +7098,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l16.Location = new System.Drawing.Point(698, 91);
+            this.numericUpDown_l16.Location = new System.Drawing.Point(714, 95);
+            this.numericUpDown_l16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l16.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6880,7 +7118,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u16.Location = new System.Drawing.Point(698, 49);
+            this.numericUpDown_u16.Location = new System.Drawing.Point(714, 53);
+            this.numericUpDown_u16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u16.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6899,7 +7138,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l17.Location = new System.Drawing.Point(798, 91);
+            this.numericUpDown_l17.Location = new System.Drawing.Point(816, 95);
+            this.numericUpDown_l17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l17.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6918,7 +7158,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u17.Location = new System.Drawing.Point(798, 49);
+            this.numericUpDown_u17.Location = new System.Drawing.Point(816, 53);
+            this.numericUpDown_u17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u17.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6937,7 +7178,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l18.Location = new System.Drawing.Point(898, 91);
+            this.numericUpDown_l18.Location = new System.Drawing.Point(918, 95);
+            this.numericUpDown_l18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l18.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6956,7 +7198,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u18.Location = new System.Drawing.Point(898, 49);
+            this.numericUpDown_u18.Location = new System.Drawing.Point(918, 53);
+            this.numericUpDown_u18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u18.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6975,7 +7218,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_l19.Location = new System.Drawing.Point(998, 91);
+            this.numericUpDown_l19.Location = new System.Drawing.Point(1020, 95);
+            this.numericUpDown_l19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_l19.Minimum = new decimal(new int[] {
             1,
             0,
@@ -6994,7 +7238,8 @@
             0,
             0,
             65536});
-            this.numericUpDown_u19.Location = new System.Drawing.Point(998, 49);
+            this.numericUpDown_u19.Location = new System.Drawing.Point(1020, 53);
+            this.numericUpDown_u19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_u19.Minimum = new decimal(new int[] {
             1,
             0,
@@ -7009,7 +7254,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("MS UI Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label26.Location = new System.Drawing.Point(3, 53);
+            this.label26.Location = new System.Drawing.Point(5, 57);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 14);
             this.label26.TabIndex = 34;
@@ -7020,11 +7265,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1218, 639);
+            this.ClientSize = new System.Drawing.Size(1219, 639);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.set_button);
             this.Controls.Add(this.Titlelabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "しきい値設定";
             this.Load += new System.EventHandler(this.Form1_Load);

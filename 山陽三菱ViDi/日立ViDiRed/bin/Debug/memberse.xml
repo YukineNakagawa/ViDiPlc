@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GetImageInterval>100</GetImageInterval>
+  <MoveImageInterval>199</MoveImageInterval>
+  <GetImagePath>C:\\test1011\</GetImagePath>
+  <SetImagePath>D:\\test1012\</SetImagePath>
+  <Kishu1>MX65HL-4SW-1-A</Kishu1>
+  <Kishu2>MX65HR-4SW-1-A</Kishu2>
+  <Kishu3>MX65C-4SW-1-C</Kishu3>
+  <Kishu4>MX65H-4SW-1-C</Kishu4>
+  <Kishu5>MX65HR-4SW-1-C</Kishu5>
+  <Kishu6>MX65_6</Kishu6>
+  <Kishu7>MX65_7</Kishu7>
+  <Kishu8>MX65_8</Kishu8>
+  <Kishu9>MX65_9</Kishu9>
+  <Kishu10>MX65_10</Kishu10>
+  <WorkSpece1>workspece1.vrws</WorkSpece1>
+  <WorkSpece2>workspece2.vrws</WorkSpece2>
+  <WorkSpece3>workspece3.vrws</WorkSpece3>
+  <WorkSpece4>workspece4.vrws</WorkSpece4>
+  <WorkSpece5>workspece5.vrws</WorkSpece5>
+  <WorkSpece6>workspece6.vrws</WorkSpece6>
+  <WorkSpece7>workspece7.vrws</WorkSpece7>
+  <WorkSpece8>workspece8.vrws</WorkSpece8>
+  <WorkSpece9>workspece9.vrws</WorkSpece9>
+  <WorkSpece10>workspece10.vrws</WorkSpece10>
+</SampleClass>

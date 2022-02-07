@@ -72,7 +72,15 @@ namespace Example.Runtime
             WorkSpece9.Text = MainWindow.sWorkspece[8];
             WorkSpece10.Text = MainWindow.sWorkspece[9];
 
-            
+            //ADD_START :2022/1/29 kitayama 理由：撮影周期を設定する処理を追加
+            if(MainWindow.interval2<1|| 160 < MainWindow.interval2)
+            {
+                //設定周期が不適当な値の場合、撮影間隔を100に設定する
+                MainWindow.interval2 = 100;
+            }
+            //切り捨て桁数が指定できないので10倍して計算し、格納時に10で割っている
+            framerate.Value = Math.Floor((1000/(decimal)MainWindow.interval2)*10)/10;
+            //ADD_END :2022/1/29 kitayama 理由：撮影周期を設定する処理を追加
         }
 
         /// <summary>
@@ -155,6 +163,11 @@ namespace Example.Runtime
                         f1.Kishu_ComboBox.Items.Add(MainWindow.sKishu[i]);
 
                     }
+
+                    //ADD_START :2022/1/29 kitayama 理由：カメラの撮影周期を設定する処理を追加
+                    //シャッタースピード(ms)に換算し小数以下を切り捨てて格納する
+                    MainWindow.interval2 = (int)Math.Floor(1 / framerate.Value * 1000);
+                    //ADD_END :2022/1/29 kitayama 理由：カメラの撮影周期を設定する処理を追加
 
                     ///////////////////////////////////////////////////////////////////
                     ///     XMLを更新する。

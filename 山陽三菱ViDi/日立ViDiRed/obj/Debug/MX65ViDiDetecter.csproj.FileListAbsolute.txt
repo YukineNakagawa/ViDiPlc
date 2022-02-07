@@ -290,7 +290,184 @@ C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\�
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.exe
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.pdb
 C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\202220204\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.SuggestedBindingRedirects.cache
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\App.g.cs
-C:\Users\user\Documents\GitHub\ViDiPlc\山陽三菱ViDi\日立ViDiRed\obj\Debug\MX65ViDiDetecter_MarkupCompile.cache
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\log4net.config
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\MX65ViDiDetecter.exe.config
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\MX65ViDiDetecter.application
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\MX65ViDiDetecter.exe
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\MX65ViDiDetecter.pdb
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Blob.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Display.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\log4net.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\PLCCommLib.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\System.Drawing.Common.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.CorePlus.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ImageProcessing.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Display.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Graphic.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ImageFile.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.FGGigE.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ToolGroup.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Interop.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\stdole.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Blob.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Core.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.Display.Controls.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\log4net.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\PLCCommLib.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.CorePlus.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ImageProcessing.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Display.Controls.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Graphic.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ImageFile.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.Core.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.FGGigE.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro3D.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\bin\Debug\Cognex.VisionPro.ToolGroup.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MainWindow.baml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MainWindow.g.cs
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\App.g.cs
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter_MarkupCompile.cache
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.g.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\Example.Runtime.Form6.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\Example.Runtime.Form1.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\Example.Runtime.Form3.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\Example.Runtime.Form4.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\Example.Runtime.Form5.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.Properties.Resources.resources
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.GenerateResource.cache
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.CoreCompileInputs.cache
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.TrustInfo.xml
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.application
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.csproj.CopyComplete
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.exe
+C:\Users\kitay\Desktop\ViDiプログラム\日立ViDiRed\obj\Debug\MX65ViDiDetecter.pdb
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.csproj.AssemblyReference.cache
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MainWindow.baml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MainWindow.g.cs
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\App.g.cs
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter_MarkupCompile.cache
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.g.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\Example.Runtime.Form6.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\Example.Runtime.Form1.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\Example.Runtime.Form3.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\Example.Runtime.Form4.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\Example.Runtime.Form5.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.Properties.Resources.resources
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.csproj.GenerateResource.cache
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.csproj.CoreCompileInputs.cache
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.exe
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.pdb
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\log4net.config
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\MX65ViDiDetecter.exe.config
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\MX65ViDiDetecter.application
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\MX65ViDiDetecter.exe
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\MX65ViDiDetecter.pdb
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Blob.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Display.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\log4net.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\PLCCommLib.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\System.Drawing.Common.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.CorePlus.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ImageProcessing.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Display.Controls.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Graphic.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ImageFile.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.FGGigE.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ToolGroup.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Interop.Core.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\stdole.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Blob.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Core.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.Display.Controls.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\log4net.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\PLCCommLib.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.CorePlus.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ImageProcessing.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Display.Controls.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Graphic.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ImageFile.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.Core.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.FGGigE.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro3D.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\bin\Debug\Cognex.VisionPro.ToolGroup.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.TrustInfo.xml
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\kitay\Desktop\ViDiプログラム\0205日立ViDiRed1\obj\Debug\MX65ViDiDetecter.application
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\log4net.config
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\MX65ViDiDetecter.exe.config
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\MX65ViDiDetecter.application
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\MX65ViDiDetecter.exe
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\MX65ViDiDetecter.pdb
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Blob.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Controls.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Core.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Display.Controls.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\log4net.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\PLCCommLib.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\System.Drawing.Common.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.CorePlus.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ImageProcessing.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Display.Controls.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Graphic.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ImageFile.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Core.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.FGGigE.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ToolGroup.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Interop.Core.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\stdole.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Blob.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Core.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.Display.Controls.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\log4net.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\PLCCommLib.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.CorePlus.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ImageProcessing.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Display.Controls.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Graphic.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ImageFile.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.Core.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.FGGigE.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro3D.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\bin\Debug\Cognex.VisionPro.ToolGroup.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\App.g.cs
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter_MarkupCompile.cache
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.g.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\Example.Runtime.Form1.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\Example.Runtime.Form3.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\Example.Runtime.Form4.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\Example.Runtime.Form5.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.Properties.Resources.resources
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.csproj.GenerateResource.cache
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.TrustInfo.xml
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.exe.manifest
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.application
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.csproj.CopyComplete
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.exe
+C:\Users\user\Desktop\中川\山陽三菱vidi案件\Source\nakagawa\20220207\0205日立ViDiRed_作業後\obj\Debug\MX65ViDiDetecter.pdb

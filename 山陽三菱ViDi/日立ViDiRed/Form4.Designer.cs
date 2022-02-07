@@ -90,6 +90,10 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.pass_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.framerate = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -105,6 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.KishuNo)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.framerate)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,10 +120,10 @@
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(40, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1250, 594);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1251, 594);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "品種設定：";
@@ -138,7 +144,7 @@
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Location = new System.Drawing.Point(29, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 505);
             this.panel1.TabIndex = 11;
@@ -152,9 +158,9 @@
             this.groupBox7.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
             this.groupBox7.Location = new System.Drawing.Point(7, 482);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Size = new System.Drawing.Size(1100, 91);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
@@ -173,7 +179,7 @@
             // WorkSpece6
             // 
             this.WorkSpece6.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece6.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece6.Name = "WorkSpece6";
             this.WorkSpece6.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece6.TabIndex = 2;
@@ -191,7 +197,7 @@
             // Kishu_textBox6
             // 
             this.Kishu_textBox6.Location = new System.Drawing.Point(107, 41);
-            this.Kishu_textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox6.Name = "Kishu_textBox6";
             this.Kishu_textBox6.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox6.TabIndex = 0;
@@ -205,9 +211,9 @@
             this.groupBox8.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox8.ForeColor = System.Drawing.Color.White;
             this.groupBox8.Location = new System.Drawing.Point(7, 848);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox8.Size = new System.Drawing.Size(1100, 91);
             this.groupBox8.TabIndex = 15;
             this.groupBox8.TabStop = false;
@@ -226,7 +232,7 @@
             // WorkSpece10
             // 
             this.WorkSpece10.Location = new System.Drawing.Point(687, 38);
-            this.WorkSpece10.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece10.Name = "WorkSpece10";
             this.WorkSpece10.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece10.TabIndex = 2;
@@ -244,7 +250,7 @@
             // Kishu_textBox10
             // 
             this.Kishu_textBox10.Location = new System.Drawing.Point(107, 38);
-            this.Kishu_textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox10.Name = "Kishu_textBox10";
             this.Kishu_textBox10.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox10.TabIndex = 0;
@@ -258,9 +264,9 @@
             this.groupBox9.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox9.ForeColor = System.Drawing.Color.White;
             this.groupBox9.Location = new System.Drawing.Point(7, 574);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox9.Size = new System.Drawing.Size(1100, 91);
             this.groupBox9.TabIndex = 12;
             this.groupBox9.TabStop = false;
@@ -279,7 +285,7 @@
             // WorkSpece7
             // 
             this.WorkSpece7.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece7.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece7.Name = "WorkSpece7";
             this.WorkSpece7.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece7.TabIndex = 2;
@@ -297,7 +303,7 @@
             // Kishu_textBox7
             // 
             this.Kishu_textBox7.Location = new System.Drawing.Point(107, 38);
-            this.Kishu_textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox7.Name = "Kishu_textBox7";
             this.Kishu_textBox7.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox7.TabIndex = 0;
@@ -311,9 +317,9 @@
             this.groupBox10.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox10.ForeColor = System.Drawing.Color.White;
             this.groupBox10.Location = new System.Drawing.Point(7, 756);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox10.Size = new System.Drawing.Size(1100, 91);
             this.groupBox10.TabIndex = 14;
             this.groupBox10.TabStop = false;
@@ -332,7 +338,7 @@
             // WorkSpece9
             // 
             this.WorkSpece9.Location = new System.Drawing.Point(687, 41);
-            this.WorkSpece9.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece9.Name = "WorkSpece9";
             this.WorkSpece9.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece9.TabIndex = 2;
@@ -350,7 +356,7 @@
             // Kishu_textBox9
             // 
             this.Kishu_textBox9.Location = new System.Drawing.Point(107, 38);
-            this.Kishu_textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox9.Name = "Kishu_textBox9";
             this.Kishu_textBox9.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox9.TabIndex = 0;
@@ -364,9 +370,9 @@
             this.groupBox11.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox11.ForeColor = System.Drawing.Color.White;
             this.groupBox11.Location = new System.Drawing.Point(7, 665);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox11.Size = new System.Drawing.Size(1100, 91);
             this.groupBox11.TabIndex = 13;
             this.groupBox11.TabStop = false;
@@ -385,7 +391,7 @@
             // WorkSpece8
             // 
             this.WorkSpece8.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece8.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece8.Name = "WorkSpece8";
             this.WorkSpece8.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece8.TabIndex = 2;
@@ -403,7 +409,7 @@
             // Kishu_textBox8
             // 
             this.Kishu_textBox8.Location = new System.Drawing.Point(107, 38);
-            this.Kishu_textBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox8.Name = "Kishu_textBox8";
             this.Kishu_textBox8.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox8.TabIndex = 0;
@@ -417,9 +423,9 @@
             this.groupBox2.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(7, 19);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Size = new System.Drawing.Size(1100, 91);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -438,7 +444,7 @@
             // WorkSpece1
             // 
             this.WorkSpece1.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece1.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece1.Name = "WorkSpece1";
             this.WorkSpece1.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece1.TabIndex = 2;
@@ -456,7 +462,7 @@
             // Kishu_textBox1
             // 
             this.Kishu_textBox1.Location = new System.Drawing.Point(108, 38);
-            this.Kishu_textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox1.Multiline = true;
             this.Kishu_textBox1.Name = "Kishu_textBox1";
             this.Kishu_textBox1.Size = new System.Drawing.Size(381, 38);
@@ -471,9 +477,9 @@
             this.groupBox6.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
             this.groupBox6.Location = new System.Drawing.Point(7, 384);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Size = new System.Drawing.Size(1100, 91);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
@@ -492,7 +498,7 @@
             // WorkSpece5
             // 
             this.WorkSpece5.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece5.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece5.Name = "WorkSpece5";
             this.WorkSpece5.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece5.TabIndex = 2;
@@ -510,7 +516,7 @@
             // Kishu_textBox5
             // 
             this.Kishu_textBox5.Location = new System.Drawing.Point(108, 39);
-            this.Kishu_textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox5.Name = "Kishu_textBox5";
             this.Kishu_textBox5.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox5.TabIndex = 0;
@@ -524,9 +530,9 @@
             this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(7, 110);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Size = new System.Drawing.Size(1100, 91);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
@@ -545,7 +551,7 @@
             // WorkSpece2
             // 
             this.WorkSpece2.Location = new System.Drawing.Point(687, 38);
-            this.WorkSpece2.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece2.Name = "WorkSpece2";
             this.WorkSpece2.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece2.TabIndex = 2;
@@ -563,7 +569,7 @@
             // Kishu_textBox2
             // 
             this.Kishu_textBox2.Location = new System.Drawing.Point(108, 35);
-            this.Kishu_textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox2.Name = "Kishu_textBox2";
             this.Kishu_textBox2.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox2.TabIndex = 0;
@@ -577,9 +583,9 @@
             this.groupBox5.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(7, 292);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Size = new System.Drawing.Size(1100, 91);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
@@ -598,7 +604,7 @@
             // WorkSpece4
             // 
             this.WorkSpece4.Location = new System.Drawing.Point(687, 38);
-            this.WorkSpece4.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece4.Name = "WorkSpece4";
             this.WorkSpece4.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece4.TabIndex = 2;
@@ -616,7 +622,7 @@
             // Kishu_textBox4
             // 
             this.Kishu_textBox4.Location = new System.Drawing.Point(108, 38);
-            this.Kishu_textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox4.Name = "Kishu_textBox4";
             this.Kishu_textBox4.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox4.TabIndex = 0;
@@ -630,9 +636,9 @@
             this.groupBox4.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(7, 201);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Size = new System.Drawing.Size(1100, 91);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
@@ -651,7 +657,7 @@
             // WorkSpece3
             // 
             this.WorkSpece3.Location = new System.Drawing.Point(687, 39);
-            this.WorkSpece3.Margin = new System.Windows.Forms.Padding(4);
+            this.WorkSpece3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkSpece3.Name = "WorkSpece3";
             this.WorkSpece3.Size = new System.Drawing.Size(381, 31);
             this.WorkSpece3.TabIndex = 2;
@@ -669,7 +675,7 @@
             // Kishu_textBox3
             // 
             this.Kishu_textBox3.Location = new System.Drawing.Point(108, 39);
-            this.Kishu_textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.Kishu_textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kishu_textBox3.Name = "Kishu_textBox3";
             this.Kishu_textBox3.Size = new System.Drawing.Size(381, 31);
             this.Kishu_textBox3.TabIndex = 0;
@@ -688,7 +694,8 @@
             // KishuNo
             // 
             this.KishuNo.Font = new System.Drawing.Font("MS UI Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.KishuNo.Location = new System.Drawing.Point(132, 37);
+            this.KishuNo.Location = new System.Drawing.Point(135, 34);
+            this.KishuNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KishuNo.Maximum = new decimal(new int[] {
             10,
             0,
@@ -700,7 +707,7 @@
             0,
             0});
             this.KishuNo.Name = "KishuNo";
-            this.KishuNo.Size = new System.Drawing.Size(58, 24);
+            this.KishuNo.Size = new System.Drawing.Size(59, 24);
             this.KishuNo.TabIndex = 13;
             this.KishuNo.Value = new decimal(new int[] {
             1,
@@ -712,9 +719,10 @@
             // 
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(243, 24);
+            this.button2.Location = new System.Drawing.Point(243, 20);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 46);
+            this.button2.Size = new System.Drawing.Size(157, 46);
             this.button2.TabIndex = 12;
             this.button2.Text = "しきい値設定";
             this.button2.UseVisualStyleBackColor = true;
@@ -723,8 +731,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1098, 624);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(1109, 701);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 44);
             this.button1.TabIndex = 6;
@@ -735,8 +743,8 @@
             // Set_button
             // 
             this.Set_button.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Set_button.Location = new System.Drawing.Point(962, 624);
-            this.Set_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Set_button.Location = new System.Drawing.Point(957, 701);
+            this.Set_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Set_button.Name = "Set_button";
             this.Set_button.Size = new System.Drawing.Size(107, 44);
             this.Set_button.TabIndex = 5;
@@ -752,8 +760,10 @@
             this.groupBox12.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox12.Location = new System.Drawing.Point(44, 604);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(418, 80);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox12.Size = new System.Drawing.Size(419, 75);
             this.groupBox12.TabIndex = 14;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "しきい値設定";
@@ -762,7 +772,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(31, 37);
+            this.label22.Location = new System.Drawing.Point(19, 35);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(104, 20);
             this.label22.TabIndex = 15;
@@ -774,8 +784,10 @@
             this.groupBox13.Controls.Add(this.textBox1);
             this.groupBox13.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox13.Location = new System.Drawing.Point(508, 607);
+            this.groupBox13.Location = new System.Drawing.Point(508, 608);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox13.Size = new System.Drawing.Size(371, 75);
             this.groupBox13.TabIndex = 15;
             this.groupBox13.TabStop = false;
@@ -786,8 +798,9 @@
             this.pass_button.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.pass_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pass_button.Location = new System.Drawing.Point(220, 25);
+            this.pass_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pass_button.Name = "pass_button";
-            this.pass_button.Size = new System.Drawing.Size(134, 38);
+            this.pass_button.Size = new System.Drawing.Size(133, 38);
             this.pass_button.TabIndex = 1;
             this.pass_button.Text = "パスワード設定";
             this.pass_button.UseVisualStyleBackColor = true;
@@ -795,10 +808,78 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 33);
+            this.textBox1.Location = new System.Drawing.Point(28, 31);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 25);
             this.textBox1.TabIndex = 0;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.framerate);
+            this.groupBox14.Controls.Add(this.label24);
+            this.groupBox14.Controls.Add(this.label23);
+            this.groupBox14.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox14.Location = new System.Drawing.Point(936, 608);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Size = new System.Drawing.Size(333, 75);
+            this.groupBox14.TabIndex = 16;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "撮影周期設定";
+            // 
+            // framerate
+            // 
+            this.framerate.DecimalPlaces = 1;
+            this.framerate.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.framerate.Location = new System.Drawing.Point(67, 31);
+            this.framerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.framerate.Maximum = new decimal(new int[] {
+            160,
+            0,
+            0,
+            0});
+            this.framerate.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.framerate.Name = "framerate";
+            this.framerate.Size = new System.Drawing.Size(77, 24);
+            this.framerate.TabIndex = 2;
+            this.framerate.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label24.Location = new System.Drawing.Point(151, 35);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(166, 17);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "枚撮影（最大160枚）";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label23.Location = new System.Drawing.Point(13, 34);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 17);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "毎秒";
             // 
             // Form4
             // 
@@ -806,13 +887,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1332, 694);
+            this.ClientSize = new System.Drawing.Size(1332, 760);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Set_button);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form4";
             this.Text = "品種設定";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -844,6 +927,9 @@
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.framerate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -912,5 +998,9 @@
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button pass_button;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.NumericUpDown framerate;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
     }
 }
