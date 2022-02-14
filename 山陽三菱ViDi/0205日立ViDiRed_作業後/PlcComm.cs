@@ -14,7 +14,8 @@ using System.Net;
 
 using log4net;
 
-using PLCCommLib;
+//using PLCCommLib;
+using MITSUBISHI.Component;
 
 namespace PlcComm
 {
@@ -24,8 +25,8 @@ namespace PlcComm
     // 伝文機能
     public enum MessFunc
     {
-        VARIETY_SET_GET = 0,            // 品種設定取得
-        VARIETY_SET_DONE,               // 品種設定切り替え応答
+        VARIETY_NO_GET = 0,             // 品種No取得
+        VARIETY_NO_SET,               // 品種No設定
         INSPECTION_START_STOP,          // 検査開始・停止
         INSPECTING_ON_OFF,              // 検査中ON/OFF
         JUDGI_RESULT,                   // 総合判定結果結果
@@ -75,7 +76,14 @@ namespace PlcComm
     // 電文フォーマット用基本クラス
     public class PlcCommunication
     {
+        // ログの初期化
         private static log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        // MX ComponentのMCプロトコルライブラリ初期化
+        DotUtlType dotUtlType = new DotUtlType()
+        {
+            ActLogicalStationNumber = 1
+        };
 
         #region フィールド
         public string IpAdr = "192.168.1.1";
@@ -84,9 +92,19 @@ namespace PlcComm
         private IPAddress _ipAdr = new IPAddress(0);
         private int _port = 0;
         /// <summary>通信処理クラスのインスタンス</summary>
-        private PLCComm _PLC = null;
+        //private PLCComm _PLC = null;
         //private PLCComm.VenderNames vnd = PLCComm.VenderNames.MITSUBISHI;
         //private PLCComm.ProtocolNames pro = PLCComm.ProtocolNames.MC3E;
+
+        // デバイス名称 for MX ComponentのMCプロトコルライブラリ
+        public String devJudgeResult            = "総合判定結果";
+        public String devVarietyNo              = "機種No";
+        public String devNowVarietyNo           = "現在機種No";
+        public String devPcSurvivalConfirm      = "PC生存確認";
+        public String devPlcSurvivalConfirm     = "PLC生存確認";
+        public String devInspectionOnOff        = "検査ON_OFF";
+        public String devInspectionStartStop    = "試験開始・停止";
+        public String devOneshot                = "ワンショット";
         #endregion
 
         #region コンストラクタ
@@ -99,8 +117,10 @@ namespace PlcComm
         #region メンバ
         // 品種設定番号
         public int varietyNo = 0;
-        // 検査状態
-        public int inspectionStatus = 0;
+        // 検査開始・停止
+        public int inspectionStartStop = 0;
+        // 検査ON/OFF
+        public int inspectionOnOff = 0;
         // 総合判定結果
         public int judgeResult = 0;
         // 生存確認フラグ
@@ -218,49 +238,109 @@ namespace PlcComm
         // 通信設定チェック→通信クラスのインスタンス生成→オープン
         public void Open()
         {
-            // IPアドレス
-            if (!IPAddress.TryParse(IpAdr, out _ipAdr)) return;
-            // 通信ポート
-            if (!int.TryParse(Port, out _port)) return;
-
-            // 通信処理のインスタンスを生成
-            _PLC = new PLC_MC();
-
-            // 設定
-            _PLC.IsUdp = false;                                 // TCP/IP
-            _PLC.IsAscii = false;                               // バイナリ
-            _PLC.NetworkNumber = 0;
-            _PLC.PCNumber = 0xFF;
-            _PLC.ReqUnitIONumber = 0x3FF;
-            _PLC.ReqUnitStnNumber = 0;
-            _PLC.CPUCheckTime = 8;
-
-            // 回線オープン
-            int ret = _PLC.Open();
-            if (ret == PLCComm.RET_COMPLETED)
+            try
             {
-                // 成功。
-                logger.Info("PLC Comm: Open(): 成功");
+                // IPアドレス
+                if (!IPAddress.TryParse(IpAdr, out _ipAdr))
+                {
+                    logger.Error("PLC Comm: Open(): 失敗： IPアドレスが見つかりません");
+                    return;
+                }
+                // 通信ポート
+                if (!int.TryParse(Port, out _port))
+                {
+                    logger.Error("PLC Comm: Open(): 失敗： ポートが見つかりません");
+                    return;
+                }
+
+                // 通信処理のインスタンスを生成
+                //_PLC = new PLC_MC();
+
+                // 設定
+                /*
+                _PLC.IsUdp = false;                                 // TCP/IP
+                _PLC.IsAscii = false;                               // バイナリ
+                _PLC.NetworkNumber = 0;
+                _PLC.PCNumber = 0xFF;
+                _PLC.ReqUnitIONumber = 0x3FF;
+                _PLC.ReqUnitStnNumber = 0;
+                _PLC.CPUCheckTime = 8;
+                */
+
+                // 回線オープン
+                int ret = dotUtlType.Open();
+                if (ret == 0)
+                {
+                    // 成功。
+                    logger.Info("PLC Comm: Open(): 成功");
+                }
+                else
+                {
+                    // 失敗
+                    logger.Error("PLC Comm: Open(): 失敗");
+                }
+                /*
+                int ret = _PLC.Open();
+                if (ret == PLCComm.RET_COMPLETED)
+                {
+                    // 成功。
+                    logger.Info("PLC Comm: Open(): 成功");
+                }
+                else
+                {
+                    // 失敗
+                    logger.Error("PLC Comm: Open(): 失敗");
+                }
+                */
             }
-            else
+            catch (Exception ex)
             {
-                // 失敗
-                logger.Error("PLC Comm: Open(): 失敗");
+                exceptionInfo = ex;
+            }
+            finally
+            {
+
             }
         }
 
         // 通信回線Close
         private void Close()
         {
-            if (_PLC == null)
+            try 
             {
-                // 失敗
-                logger.Error("PLC Comm: Close(): 成功");
-                return;
-            }
+                // 回線クローズ
+                int ret = dotUtlType.Close();
+                if (ret == 0)
+                {
+                    // 成功。
+                    logger.Info("PLC Comm: Close(): 成功");
+                }
+                else
+                {
+                    // 失敗
+                    logger.Error("PLC Comm: Close(): 失敗");
+                }
 
-            _PLC.Close();
-            _PLC = null;
+                /*
+                if (_PLC == null)
+                {
+                    // 失敗
+                    logger.Error("PLC Comm: Close(): 成功");
+                    return;
+                }
+
+                _PLC.Close();
+                _PLC = null;
+                */
+            }
+            catch (Exception ex)
+            {
+                exceptionInfo = ex;
+            }
+            finally
+            {
+
+            }
         }
 
         // PLCとの通信：要求伝文を送信して応答伝文を受け取る
@@ -268,11 +348,16 @@ namespace PlcComm
         {
             try
             {
-                string dev = deviceName;
+                //string dev = deviceName;
                 int size = 0;
-                short[] dat = null;
+                int[] buffer = null;
+                int[] data = null;
+                int readBitData = 0;
+                int writeBitData = 0;
+                //short[] dat = null;
                 int ret;
 
+                /*
                 // 通信クラスのインスタンス生成前は不可
                 if (_PLC == null)
                 {
@@ -286,104 +371,205 @@ namespace PlcComm
                     logger.Error("PLC Comm: Communication(): 通信回線オープン前");
                     return;
                 }
+                */
 
                 // 応答メッセージのクリア
-                _listMessageReply.Clear();
+                //_listMessageReply.Clear();
 
-                // 機能に応じて要求メッセージを生成
+                // 機能に応じて要求メッセージを送信・応答メッセージ受信
                 switch (func)
                 {
-                    // 品種設定 ReadByte
-                    case MessFunc.VARIETY_SET_GET:
+                    // 品種No取得 ReadByte
+                    case MessFunc.VARIETY_NO_GET:
                         // 読み込み点数を設定
                         size = 1;
+                        // 読み込みバッファ定義
+                        buffer = new int[size];
                         // Commandを作成
-                        _setReqestDataReadByte(func, size);
+                        //_setReqestDataReadByte(func, size);
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Read Byte
-                        ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.ReadDeviceBlock(ref devVarietyNo, size, ref buffer);
+                        // 品種Noを設定
+                        varietyNo = (int)buffer[0];
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 品種No取得 ReadByte：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 品種No取得 ReadByte：失敗");
+                        }
                         // ログ
-                        logger.Info("PLC Comm: 品種設定 ReadByte要求");
+                        logger.Info("PLC Comm: 品種No取得 ReadByte要求送信・応答受信");
                         break;
-                    // 品種切り替え応答 WriteByte
-                    case MessFunc.VARIETY_SET_DONE:
-                        _setReqestDataWriteByte(func);
+                    // 現在品種No設定 WriteByte
+                    case MessFunc.VARIETY_NO_SET:
+                        //_setReqestDataWriteByte(func);
                         // 書き込むデータ数
-                        size = _listMessageRequest.Count;
+                        //size = _listMessageRequest.Count;
+                        size = 1;
+                        // 書き込みバッファ定義
+                        data = new int[size];
+                        // 書き込みData
+                        data[0] = varietyNo;
+
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Write Byte
-                        ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.WriteDeviceBlock(ref devNowVarietyNo, size, data);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 現在品種No設定 WriteByte：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 現在品種No設定 WriteByte：失敗");
+                        }
                         // ログ
-                        logger.Info("PLC Comm: 品種切り替え応答 WriteByte要求");
+                        logger.Info("PLC Comm: 現在品種No設定 WriteByte要求送信・応答受信");
                         break;
                     // 検査開始・停止 ReadBit
                     case MessFunc.INSPECTION_START_STOP:
                         // 読み込み点数を設定
-                        size = 1;
+                        //size = 1;
+                        // 読み込みバッファ定義
+                        //buffer = new int[size];
                         // Commandを作成
-                        _setReqestDataReadBit(func, size);
+                        //_setReqestDataReadBit(func, size);
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Read Byte
-                        ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.GetDevice(ref devInspectionStartStop, ref readBitData);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 現在品種No設定 ReadBit：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 現在品種No設定 ReadBit：失敗");
+                        }
+                        // 検査開始・停止取得
+                        inspectionStartStop = readBitData;
                         // ログ
-                        logger.Info("PLC Comm: 検査開始・停止 ReadBit要求");
+                        logger.Info("PLC Comm: 検査開始・停止 ReadBit要求送信・応答受信");
                         break;
                     // 検査中ON/OFF WriteBit
                     case MessFunc.INSPECTING_ON_OFF:
-                        _setReqestDataWriteBit(func);
+                        //_setReqestDataWriteBit(func);
                         // 書き込むデータ数
-                        size = _listMessageRequest.Count;
+                        //size = _listMessageRequest.Count;
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
+                        // 書き込むデータBit
+                        writeBitData = inspectionOnOff;
                         // Write Byte
-                        ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.SetDevice(ref devInspectionOnOff, writeBitData);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 検査中ON/OFF WriteBit：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 検査中ON/OFF WriteBit：失敗");
+                        }
                         // ログ
-                        logger.Info("PLC Comm: 検査中ON/OFF WriteBitt要求");
+                        logger.Info("PLC Comm: 検査中ON/OFF WriteBitt要求送信・応答受信");
                         break;
                     // 判定結果 WriteByte
                     case MessFunc.JUDGI_RESULT:
-                        _setReqestDataWriteByte(func);
+                        //_setReqestDataWriteByte(func);
                         // 書き込むデータ数
-                        size = _listMessageRequest.Count;
+                        //size = _listMessageRequest.Count;
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Write Byte
-                        ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.WriteDeviceBlock(ref devJudgeResult, size, data);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 判定結果 WriteByte：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 判定結果 WriteByte：失敗");
+                        }
                         // ログ
-                        logger.Info("PLC Comm: 判定結果 WriteByte要求");
+                        logger.Info("PLC Comm: 判定結果 WriteByte要求送信・応答受信");
                         break;
                     // ワンショット ReadBit
                     case MessFunc.ONE_SHOT:
                         // 読み込み点数を設定
-                        size = 1;
+                        //size = 1;
                         // Commandを作成
-                        _setReqestDataReadBit(func, size);
+                        //_setReqestDataReadBit(func, size);
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Read Byte
-                        ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.ReadDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.GetDevice(ref devOneshot, ref readBitData);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): ワンショット ReadBit：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): ワンショット ReadBit：失敗");
+                        }
+                        // ワンショット設定
+                        oneShot = readBitData;
                         // ログ
-                        logger.Info("PLC Comm: ワンショット ReadBit要求");
+                        logger.Info("PLC Comm: ワンショット ReadBit要求送信・応答受信");
                         break;
                     // 生存確認 writeBit
                     case MessFunc.SURVEY_CHECK:
-                        _setReqestDataWriteBit(func);
+                        //_setReqestDataWriteBit(func);
                         // 書き込むデータ数
-                        size = _listMessageRequest.Count;
+                        //size = _listMessageRequest.Count;
                         // Messageに要求データをコピー
-                        dat = _listMessageRequest.ToArray();
+                        //dat = _listMessageRequest.ToArray();
                         // Write Byte
-                        ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        //ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        // 書き込むデータBit
+                        writeBitData = survivalSutatus;
+                        // Write Byte
+                        //ret = _PLC.WriteDeviceBlock(dev, size, ref dat);
+                        ret = dotUtlType.SetDevice(ref devPcSurvivalConfirm, writeBitData);
+                        if (ret == 0)
+                        {
+                            // 成功。
+                            logger.Info("PLC Comm: Communication(): 生存確認 WriteBit：成功");
+                        }
+                        else
+                        {
+                            // 失敗
+                            logger.Error("PLC Comm: Communication(): 生存確認 WriteBit：失敗");
+                        }
                         // ログ
-                        logger.Info("PLC Comm: 生存確認 writeBit要求");
+                        logger.Info("PLC Comm: 生存確認 writeBit要求送信・応答受信");
                         break;
                     default:
                         return;
                 }
 
+                /*
                 // 応答データの解析
                 if (ret == PLCComm.RET_COMPLETED)
                 {
@@ -423,7 +609,7 @@ namespace PlcComm
                     // 要求伝文→応答伝文：失敗
                     logger.Error("PLC Comm: Communication(): 応答伝文：失敗");
                 }
-
+                */
             }
             catch (Exception ex)
             {
@@ -753,6 +939,7 @@ namespace PlcComm
         #endregion
 
         #region 要求Message作成
+        /*
         // 読み出し
         // ReadByte
         private bool _setReqestDataReadByte(MessFunc reqFuncId, int num)
@@ -834,7 +1021,8 @@ namespace PlcComm
 
             }
         }
-
+        */
+        /*
         // 書き込み
         // Write Byte
         private bool _setReqestDataWriteByte(MessFunc mesFunc)
@@ -983,6 +1171,7 @@ namespace PlcComm
             }
             return ret;
         }
+        */
         #endregion
 
         /*

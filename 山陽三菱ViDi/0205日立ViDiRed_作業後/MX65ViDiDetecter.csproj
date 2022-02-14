@@ -122,6 +122,10 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="MITSUBISHI.Component.DotUtlType, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b44489e63a9c4bd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\MELSOFT\ACT\Control\MITSUBISHI.Component.DotUtlType.dll</HintPath>
+    </Reference>
     <Reference Include="PLCCommLib">
       <HintPath>..\PlcComm\PLCCommLib.dll</HintPath>
     </Reference>

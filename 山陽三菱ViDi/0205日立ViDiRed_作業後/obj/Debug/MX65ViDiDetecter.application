@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MX65ViDiDetecter.exe.manifest" size="26961">
+    <dependentAssembly dependencyType="install" codebase="MX65ViDiDetecter.exe.manifest" size="29029">
       <assemblyIdentity name="MX65ViDiDetecter.exe" version="1.5.5.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aWCn4XHFojaHDMAG/33ftZ0+DlN7z70V9cYqACsgnaQ=</dsig:DigestValue>
+        <dsig:DigestValue>sQv8iQ/+WTGSC355IH9OsMp+YJ3lHjcxVMqnecQ7tBs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

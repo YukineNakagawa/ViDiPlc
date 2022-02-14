@@ -42,6 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ActUtlTypeLib.dll" size="15872">
+      <assemblyIdentity name="ActUtlTypeLib" version="1.0.0.0" publicKeyToken="627CB188E78F967A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7ThXsUMjO+FwPLxalMaKZ4AoisUAB4cSqx3+Ibo0tTs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cognex.VisionPro.dll" size="304536">
       <assemblyIdentity name="Cognex.VisionPro" version="71.2.0.0" publicKeyToken="EF0F902AF9DEE505" language="neutral" processorArchitecture="amd64" />
       <hash>
@@ -234,14 +246,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MX65ViDiDetecter.exe" size="368640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MITSUBISHI.Component.DotUtlType.dll" size="55296">
+      <assemblyIdentity name="MITSUBISHI.Component.DotUtlType" version="1.0.0.0" publicKeyToken="6B44489E63A9C4BD" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>gjMkOEsbtl/g/UtHlVSY9nwJMu0RoxN52EXhKeN4fnY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MX65ViDiDetecter.exe" size="368128">
       <assemblyIdentity name="MX65ViDiDetecter" version="1.5.3.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yfH7iH8E4JyouqZFODFTLRvEtSekTbrYtZuyI/4X7cc=</dsig:DigestValue>
+        <dsig:DigestValue>ORxrrCF0wKEwdgbakhDwmIH+LheWK7lkah0/u1CVaJ8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MXLabelMemLib.dll" size="6656">
+      <assemblyIdentity name="MXLabelMemLib" version="1.0.0.0" publicKeyToken="556BDC7A56920026" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>s70kXun+rVtvQsUXHDBfoLDYuqcQz9wEw7sOfdsjfKg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
